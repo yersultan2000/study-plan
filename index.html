@@ -433,6 +433,71 @@ nav button.on{background:linear-gradient(135deg,#ff1f7a,#ff9f00);color:#fff;box-
 input,select,textarea{border:0;box-shadow:0 3px 0 var(--edge0),0 2px 4px rgba(0,0,0,.06) inset;font-weight:600}
 input:focus,select:focus,textarea:focus{outline:3px solid #ff9f00;outline-offset:1px}
 
+/* ===== v8: hero, practice, decks, zen, onboarding ===== */
+.hero{display:flex;align-items:center;gap:16px;margin:4px 0 22px;padding:16px;border-radius:28px;color:#fff;background:linear-gradient(135deg,#14102b,#3b2f7a 55%,#7c3aed);box-shadow:0 2px 0 rgba(255,255,255,.25) inset,0 8px 0 #07051a,0 26px 34px -18px rgba(40,10,90,.6);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-40px;bottom:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,31,122,.45),transparent 65%)}
+.donut{position:relative;width:118px;height:118px;flex:none}
+.donut svg{width:100%;height:100%;filter:drop-shadow(0 6px 8px rgba(255,31,122,.45))}
+.donut>div{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.donut b{font:900 26px Unbounded,sans-serif;line-height:1}.donut span{font-size:11px;opacity:.8;font-weight:700}
+.hinfo{flex:1;position:relative}
+.hinfo>b{display:block;font:900 17px Unbounded,sans-serif;line-height:1.2}
+.hinfo>span{display:block;font-size:13px;opacity:.85;margin:4px 0 10px;font-weight:600}
+.hstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.hstats span{background:rgba(255,255,255,.12);border-radius:12px;padding:6px 4px;text-align:center;font-size:10px;font-weight:700;line-height:1.2;box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.hstats b{display:block;font:900 17px Unbounded,sans-serif}
+.pick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.pbig{border:0;border-radius:24px;color:#fff;min-height:132px;padding:14px 10px;display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;font:800 14px Figtree,sans-serif;box-shadow:0 2px 0 rgba(255,255,255,.4) inset,0 7px 0 var(--edge),0 18px 24px -12px rgba(0,0,0,.4);cursor:pointer;position:relative;overflow:hidden}
+.pbig i{font:900 30px Unbounded,sans-serif;font-style:normal;margin-bottom:auto;text-shadow:0 3px 0 rgba(0,0,0,.2)}
+.pbig b{font:900 14px Unbounded,sans-serif}.pbig span{font-size:12px;opacity:.9}
+.pbig:active{transform:translateY(4px);box-shadow:0 3px 0 var(--edge)}
+.trow{width:100%;display:grid;grid-template-columns:minmax(0,1fr) 70px 3em;gap:10px;align-items:center;background:none;border:0;border-bottom:1px solid var(--line);padding:10px 0;min-height:48px;color:var(--ink);font:700 15px Figtree,sans-serif;text-align:left;cursor:pointer}
+.acc{height:10px;border-radius:99px;background:var(--line);overflow:hidden}.acc i{display:block;height:100%;border-radius:99px}
+.trow em{font-style:normal;font-size:13px;color:var(--mute);text-align:right}
+.pbar{display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:800;color:var(--mute);margin-bottom:10px;flex-wrap:wrap}
+.pbar b{color:var(--coral);font-family:Unbounded,sans-serif}
+.qcard{padding-top:24px}
+.qtext{font-size:21px;font-weight:800;line-height:1.4;margin-bottom:16px;text-shadow:0 2px 0 rgba(0,0,0,.15)}
+.qtext sup{font-size:.7em}
+.ans{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.ans input{height:58px;font:800 22px Figtree,sans-serif;border-radius:16px;background:#fff;color:#14102b;box-shadow:0 4px 0 rgba(0,0,0,.25) inset,0 0 0 0}
+.ans input:disabled{opacity:.85}
+.ans .go{height:58px;border:0;border-radius:16px;padding:0 18px;background:#14102b;color:#fff;font:900 15px Unbounded,sans-serif;box-shadow:0 5px 0 #000;cursor:pointer}
+.ans .go:active{transform:translateY(3px);box-shadow:0 2px 0 #000}
+.keys{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:5px;margin-top:10px}
+.keys button{height:40px;border:0;border-radius:10px;background:rgba(255,255,255,.25);color:#fff;font:800 15px Figtree,sans-serif;box-shadow:0 3px 0 rgba(0,0,0,.2);cursor:pointer;padding:0}
+.keys button:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.2)}
+.verdict{margin-top:14px;font:900 20px Unbounded,sans-serif;text-shadow:0 2px 0 rgba(0,0,0,.2)}
+.sol{margin-top:10px!important;font-size:15px;line-height:1.5}
+.qcard.ok{animation:pop .35s ease-out}.qcard.bad{animation:shake .4s}
+@keyframes pop{50%{transform:scale(1.03)}}@keyframes shake{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+.wbtn2{width:100%;margin-top:10px;background:#fff!important;color:#14102b!important}
+#pMode{display:grid;grid-template-columns:1fr 1fr}#pMode button{white-space:nowrap}
+.deckbar{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 14px;scrollbar-width:none}
+.deckbar::-webkit-scrollbar{display:none}
+.deckbar button{flex:none;height:44px;border:0;border-radius:14px;padding:0 14px;font:800 14px Figtree,sans-serif;background:var(--card);color:var(--ink);box-shadow:0 4px 0 var(--edge0),var(--lift);cursor:pointer;white-space:nowrap}
+.deckbar button.on{background:linear-gradient(135deg,#e11df0,#ff70d0);color:#fff;box-shadow:0 4px 0 #9c10a8}
+.deckbar b{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:99px;background:#ff4d2e;color:#fff;font-size:12px;margin-left:4px}
+.fc{background:linear-gradient(135deg,#e11df0,#ff70d0)!important;color:#fff;border-radius:28px!important;min-height:240px!important;box-shadow:0 2px 0 rgba(255,255,255,.4) inset,0 9px 0 #9c10a8,0 26px 34px -16px rgba(150,10,160,.5)!important}
+.fc .w{font-family:Unbounded,sans-serif;text-shadow:0 3px 0 rgba(0,0,0,.18)}.fc .hint,.fc .e{color:rgba(255,255,255,.88)!important}
+.zen{position:fixed;inset:0;z-index:30;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;padding:calc(env(safe-area-inset-top) + 20px) 20px calc(env(safe-area-inset-bottom) + 30px)}
+.zen[hidden]{display:none}
+.zt{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.zt span{font:800 18px Figtree,sans-serif;opacity:.9}
+.zt b{font:900 clamp(72px,24vw,140px) Unbounded,sans-serif;line-height:1;text-shadow:0 6px 0 rgba(0,0,0,.2);font-variant-numeric:tabular-nums;margin:10px 0}
+.zb{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:420px}
+.zb button{height:60px;border:0;border-radius:20px;background:#fff;color:#14102b;font:900 17px Unbounded,sans-serif;box-shadow:0 6px 0 rgba(0,0,0,.3);cursor:pointer}
+.zb button+button{background:rgba(255,255,255,.22);color:#fff}
+#onb input{margin-top:6px}
+.obg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:44vh;overflow:auto;padding:2px}
+.obg button{display:flex;flex-direction:column;align-items:flex-start;gap:1px;margin:0!important;height:auto!important;min-height:70px;padding:10px 12px;border-radius:16px!important;background:var(--card)!important;color:var(--ink)!important;box-shadow:0 4px 0 var(--edge0)!important;font:800 14px Figtree,sans-serif!important;text-align:left}
+.obg button i{font:900 15px Unbounded,sans-serif;font-style:normal}
+.obg button span{font-size:12px;opacity:.8;font-weight:600}
+.obg button.on{background:var(--g)!important;color:#fff!important;box-shadow:0 4px 0 var(--edge)!important}
+#obGo{background:linear-gradient(135deg,#ff1f7a,#ff9f00)!important;font-family:Unbounded,sans-serif!important;box-shadow:0 6px 0 #b8004f;margin-top:14px!important;height:58px!important}
+.sheet section{max-height:92vh;overflow:auto;border-radius:30px 30px 0 0}
+input[type=range]{accent-color:#ff1f7a}
+
 </style>
 </head>
 <body>
@@ -447,8 +512,10 @@ input:focus,select:focus,textarea:focus{outline:3px solid #ff9f00;outline-offset
   <div class="rings" id="rings"></div>
   <div class="seg" id="dayTabs"><button data-t="day" class="on">Today</button><button data-t="week">Next 7 days</button></div>
   <div id="dayView">
-  <div class="bar"><i id="bar"></i></div>
-  <div class="prog"><span id="pt"></span><span id="eta"></span></div>
+  <div class="hero" id="hero">
+    <div class="donut"><svg viewBox="0 0 120 120"><defs><linearGradient id="dg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff1f7a"/><stop offset=".5" stop-color="#ff9f00"/><stop offset="1" stop-color="#ffd60a"/></linearGradient></defs><circle cx="60" cy="60" r="48" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="16"/><circle id="dnArc" cx="60" cy="60" r="48" fill="none" stroke="url(#dg)" stroke-width="16" stroke-linecap="round" stroke-dasharray="301.6" stroke-dashoffset="301.6" transform="rotate(-90 60 60)"/></svg><div><b id="dnPct">0%</b><span>of today</span></div></div>
+    <div class="hinfo"><b id="pt"></b><span id="eta"></span><div class="hstats"><span><b id="hStreak">0</b>streak</span><span><b id="hXp">0</b>XP today</span><span><b id="hDue">0</b>to review</span></div></div>
+  </div>
   <div id="cardWrap"></div>
   <div class="row2"><button class="ghost urge" id="urge">I want to scroll</button><button class="ghost" id="undo">Undo last</button></div>
   <div class="row2" style="margin-top:8px"><button class="ghost" data-go="goals">Edit my goals</button><button class="ghost" id="addToday">+ Task for today</button></div>
@@ -516,6 +583,12 @@ input:focus,select:focus,textarea:focus{outline:3px solid #ff9f00;outline-offset
   <ul class="log" id="scoreL"></ul>
 </section>
 
+<section class="view" id="v-practice">
+  <header><h1 class="mega">Practice</h1><span class="date" id="pAcc"></span></header>
+  <p class="sub">Real problems, checked instantly, with full solutions. New numbers every time.</p>
+  <div id="pArea"></div>
+</section>
+
 <section class="view" id="v-focus">
   <header><h1>Focus</h1><span class="date" id="fToday"></span></header>
   <p class="sub">Phone face-up on this screen. Leave the app and you've lost the round.</p>
@@ -526,6 +599,10 @@ input:focus,select:focus,textarea:focus{outline:3px solid #ff9f00;outline-offset
     <div class="bigt"><div><b id="fTime">50:00</b><span id="fMode">Focus</span></div></div>
   </div>
   <div class="ctl"><button class="btn" id="fGo">Start</button><button class="ghost" id="fReset">Reset</button></div>
+  <button class="ghost" style="width:100%;margin-top:10px" id="fZen">Full-screen focus mode</button>
+  <h2 class="sec">Focus sounds</h2>
+  <div class="seg" id="amb"><button data-a="off" class="on">Off</button><button data-a="brown">Deep</button><button data-a="rain">Rain</button><button data-a="pink">Soft</button><button data-a="white">White</button></div>
+  <label class="tog"><span>Volume</span><input type="range" id="vol" min="0" max="1" step="0.05" style="width:55%;height:auto;box-shadow:none"></label>
   <h2 class="sec">How to use a round</h2>
   <ul class="dbody b" style="padding-left:20px;list-style:disc">
     <li>Before you start, write one line: <b>"By the end I will have…"</b></li>
@@ -538,19 +615,21 @@ input:focus,select:focus,textarea:focus{outline:3px solid #ff9f00;outline-offset
 
 <section class="view" id="v-words">
   <button class="back" data-go="tools">← Tools</button>
-  <header><h1>Words</h1><span class="date" id="wDue"></span></header>
-  <p class="sub">Spaced repetition for IELTS vocabulary. Words you know come back less often; words you miss come back tomorrow.</p>
+  <header><h1 class="mega">Decks</h1><span class="date" id="wDue"></span></header>
+  <p class="sub">Spaced repetition. Cards you know come back less often; cards you miss come back tomorrow.</p>
+  <div class="deckbar" id="deckBar"></div>
+  <form id="newDeck" class="f" hidden style="margin-bottom:12px"><input id="ndName" class="full" placeholder="Deck name, e.g. Calc theorems" aria-label="Deck name"><button class="btn full">Create deck</button></form>
   <div id="fcWrap"></div>
-  <h2 class="sec">Add a word</h2>
+  <h2 class="sec">Add a card</h2>
   <form class="f" id="wF">
-    <input class="full" id="wW" placeholder="Word or phrase" required aria-label="Word">
-    <input class="full" id="wM" placeholder="Meaning" required aria-label="Meaning">
-    <textarea class="full" id="wE" placeholder="Your own example sentence (this is what makes it stick)" aria-label="Example"></textarea>
-    <button class="btn full">Add to deck</button>
+    <input class="full" id="wW" placeholder="Front: word, term or question" required aria-label="Word">
+    <input class="full" id="wM" placeholder="Back: meaning or answer" required aria-label="Meaning">
+    <textarea class="full" id="wE" placeholder="Example or extra note (optional)" aria-label="Example"></textarea>
+    <button class="btn full">Add card</button>
   </form>
-  <h2 class="sec">Your deck</h2>
+  <h2 class="sec">Cards in this deck</h2>
   <ul class="log" id="wL"></ul>
-  <p class="note">The first 8 words are a starter set. Delete them or keep them.</p>
+  <p class="note">Starter cards are included in each deck. Delete them or keep them.</p>
 </section>
 
 <section class="view" id="v-methods">
@@ -582,8 +661,8 @@ input:focus,select:focus,textarea:focus{outline:3px solid #ff9f00;outline-offset
 </section>
 
 <section class="view" id="v-tools">
-  <h1>Tools</h1>
-  <p class="sub">Everything else you need, in one place.</p>
+  <h1 class="mega">More</h1>
+  <p class="sub">Stats, decks, tools and guides.</p>
   <div class="tiles" id="tiles"></div>
 </section>
 
@@ -685,9 +764,9 @@ input:focus,select:focus,textarea:focus{outline:3px solid #ff9f00;outline-offset
 <nav><div id="nav">
   <button data-v="today"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg>Today</button>
   <button data-v="goals"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>Goals</button>
+  <button data-v="practice"><svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/></svg>Practice</button>
   <button data-v="focus"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg>Focus</button>
-  <button data-v="stats"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Stats</button>
-  <button data-v="tools"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>Tools</button>
+  <button data-v="tools"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>More</button>
 </div></nav>
 
 <div class="sheet" id="sheet"><section>
@@ -704,6 +783,7 @@ input:focus,select:focus,textarea:focus{outline:3px solid #ff9f00;outline-offset
   <div class="qa">
     <button data-qa="goal">Goal<span>A new daily goal</span></button>
     <button data-qa="once">Task for today<span>One-off, just today</span></button>
+    <button data-qa="practice">Practice<span>Quick 10 questions</span></button>
     <button data-qa="errors">Mistake<span>Into the error log</span></button>
     <button data-qa="score">Score<span>A mock or quiz result</span></button>
     <button data-qa="words">Word<span>New vocabulary card</span></button>
@@ -713,6 +793,16 @@ input:focus,select:focus,textarea:focus{outline:3px solid #ff9f00;outline-offset
   </div>
   <button class="sec" id="qaClose">Close</button>
 </section></div>
+<div class="sheet" id="onb"><section>
+  <h3 class="mega" style="font-size:30px">Welcome!</h3>
+  <p>Set up your study app in 20 seconds. You can change everything later.</p>
+  <input id="obName" placeholder="Your name" aria-label="Your name" maxlength="30">
+  <div class="lbl" style="margin:14px 0 6px">Pick your daily goals (tap to select)</div>
+  <div class="obg" id="obG"></div>
+  <button id="obGo">Let's go</button>
+  <button class="sec" id="obSkip">Skip, I'll set it up myself</button>
+</section></div>
+<div class="zen" id="zen" hidden><div class="zt"><span id="zSub"></span><b id="zTime">00:00</b><span id="zMode"></span></div><div class="zb"><button id="zGo">Pause</button><button id="zX">Exit</button></div></div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -844,7 +934,7 @@ function unlog(s,m){const f=S.get('plan:focus',[]);for(let i=f.length-1;i>=0;i--
 function chips(){
  const ev=events(),short={'AP Macroeconomics':'AP Macro','AP Calculus BC':'Calc BC','AP Statistics':'AP Stats'};
  const c=Object.entries(ev).map(([d,n])=>[short[n]||n,dd(d)]).filter(x=>x[1]>=0).sort((a,b)=>a[1]-b[1]).slice(0,4);
- const ed=S.get('plan:errs',[]).filter(e=>!e.done&&e.due<=key).length,wd=due().length;
+ const ed=S.get('plan:errs',[]).filter(e=>!e.done&&e.due<=key).length,wd=allDue();
  $('chips').innerHTML=c.map(([n,v])=>`<span class="chip">${esc(n)} ${v===0?'<b>today</b>':v===1?'<b>tomorrow</b>':`in <b>${v}</b> days`}</span>`).join('')+(ed?`<button class="chip hot" data-go="errors"><b>${ed}</b> mistake${ed>1?'s':''} to redo</button>`:'')+(wd?`<button class="chip hot2" data-go="words"><b>${wd}</b> words due</button>`:'');
 }
 const ringSVG=(k,p,sz,label)=>{const r=sz/2-7,c=2*Math.PI*r,id='rg'+k+sz;return`<svg viewBox="0 0 ${sz} ${sz}" width="${sz}" height="${sz}" aria-label="${label}"><defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${SUBJ[k].g[0]}"/><stop offset="1" stop-color="${SUBJ[k].g[1]}"/></linearGradient></defs><circle cx="${sz/2}" cy="${sz/2}" r="${r}" fill="none" stroke="${SUBJ[k].g[0]}" stroke-opacity=".18" stroke-width="10"/><circle cx="${sz/2}" cy="${sz/2}" r="${r}" fill="none" stroke="url(#${id})" stroke-width="10" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-Math.min(1,p))}" transform="rotate(-90 ${sz/2} ${sz/2})"/></svg>`};
@@ -862,10 +952,12 @@ function renderRings(){
 function renderToday(anim){
  if(cur===null||cur<0||!tasks[cur]||st[tasks[cur].id])cur=tasks.findIndex(t=>!st[t.id]);
  const n=tasks.filter(t=>st[t.id]).length;
- $('bar').style.width=(tasks.length?n/tasks.length*100:0)+'%';
- $('pt').textContent=tasks.length?`${n} of ${tasks.length} done`:'';
+ 
+ $('pt').textContent=tasks.length?`${n} of ${tasks.length} goals done`:'No goals yet';
  const left=tasks.filter(t=>!st[t.id]).reduce((s,t)=>s+(t.min||0),0),done=tasks.filter(t=>st[t.id]==='done').reduce((s,t)=>s+(t.min||0),0);
- if(left){const f=new Date(Date.now()+left*6e4);$('eta').textContent=`${Math.floor(left/60)}h ${left%60}m left · done ~${pad(f.getHours())}:${pad(f.getMinutes())}`}else $('eta').textContent=done?`${done} min done`:'';
+ if(left){const f=new Date(Date.now()+left*6e4);$('eta').textContent=`${Math.floor(left/60)}h ${left%60}m left · done ~${pad(f.getHours())}:${pad(f.getMinutes())}`}else $('eta').textContent=done?`${done} min done`:'Add goals to fill your day';
+ const tot=left+done,pc=tot?Math.round(done/tot*100):0;$('dnPct').textContent=pc+'%';$('dnArc').setAttribute('stroke-dashoffset',301.6*(1-pc/100));
+ $('hStreak').textContent=streak();$('hXp').textContent=S.get('plan:focus',[]).filter(x=>x.d===key).reduce((a,x)=>a+x.m,0);$('hDue').textContent=S.get('plan:errs',[]).filter(e=>!e.done&&e.due<=key).length+allDue();
  const busy=S.get('plan:busy:'+key,false);$('busy').classList.toggle('on',busy);$('busy').textContent=busy?'Busy day: every goal is halved. Tap to restore':'Busy day? Halve every goal today';
  const w=$('cardWrap');w.style.setProperty('--e1','');
  if(!goals.length&&!tasks.length){
@@ -962,12 +1054,12 @@ $('gExtra').onclick=e=>{const b=e.target.closest('[data-x]');if(!b)return;const 
 
 /* ---------- level, badges, heatmap ---------- */
 const LV=['Rookie','Starter','Focused','Grinder','Scholar','Machine','Olympian','Legend','Mythic'];
-function xp(){const f=S.get('plan:focus',[]);return f.reduce((a,x)=>a+x.m,0)+50*S.get('plan:days',[]).length+10*S.get('plan:errs',[]).filter(e=>e.done).length}
+function xp(){const f=S.get('plan:focus',[]);return f.reduce((a,x)=>a+x.m,0)+S.get('plan:pxp',0)+50*S.get('plan:days',[]).length+10*S.get('plan:errs',[]).filter(e=>e.done).length}
 function lvlOf(x){let L=1;while(x>=150*L*(L+1)/2)L++;return L}
 function renderLevel(){const x=xp(),L=lvlOf(x),lo=150*(L-1)*L/2,hi=150*L*(L+1)/2,p=(x-lo)/(hi-lo);
  $('lvlPill').innerHTML=`<b>Lv ${L}</b> ${LV[Math.min(L-1,LV.length-1)]}`;
  $('xpTxt').textContent=`${x} XP`;
- $('lvlCard').innerHTML=`<div class="lvbig"><span class="lvn">${L}</span><div><b>${LV[Math.min(L-1,LV.length-1)]}</b><span>${x} XP · ${hi-x} XP to level ${L+1}</span><div class="bar"><i style="width:${p*100}%"></i></div></div></div><p class="note">1 XP per minute studied · +50 per full day · +10 per mistake retired</p>`}
+ $('lvlCard').innerHTML=`<div class="lvbig"><span class="lvn">${L}</span><div><b>${LV[Math.min(L-1,LV.length-1)]}</b><span>${x} XP · ${hi-x} XP to level ${L+1}</span><div class="bar"><i style="width:${p*100}%"></i></div></div></div><p class="note">1 XP per minute studied · +2 per correct practice answer · +50 per full day · +10 per mistake retired</p>`}
 const BADGES=[
  ['first','First step','Finish your first goal',()=>S.get('plan:focus',[]).length>0,'★'],
  ['goals3','Architect','Set 3 or more goals',()=>goals.length>=3,'◎'],
@@ -984,7 +1076,11 @@ const BADGES=[
  ['err10','Debugger','Retire 10 mistakes',()=>S.get('plan:errs',[]).filter(e=>e.done).length>=10,'!'],
  ['ess5','Writer','Write 5 essays',()=>S.get('plan:essays',[]).length>=5,'W'],
  ['urge10','Unhooked','Beat 10 urges to scroll',()=>S.get('plan:urges',0)>=10,'⚡'],
- ['unit5','Climber','Finish 5 course units',()=>cdone('calc')+cdone('stats')+cdone('write')>=5,'▲']];
+ ['unit5','Climber','Finish 5 course units',()=>cdone('calc')+cdone('stats')+cdone('write')>=5,'▲'],
+ ['p50','Problem solver','50 correct practice answers',()=>S.get('plan:pxp',0)>=100,'✎'],
+ ['p500','Math machine','500 correct practice answers',()=>S.get('plan:pxp',0)>=1000,'∞'],
+ ['perfect','Perfect 10','10/10 in a practice session',()=>S.get('plan:psess',[]).some(x=>x.n>=10&&x.c===x.n),'10'],
+ ['deck','Collector','Make your own deck',()=>DECKS.length>3,'▦']];
 const xpMin=()=>S.get('plan:focus',[]).reduce((a,x)=>a+x.m,0);
 const subMin=s=>S.get('plan:focus',[]).filter(x=>subOf(x.s)===s).reduce((a,x)=>a+x.m,0);
 function checkBadges(){const got=S.get('plan:badges',[]);BADGES.forEach(([id,n,,c])=>{if(!got.includes(id)&&c()){got.push(id);S.set('plan:badges',got);setTimeout(()=>{toast(`Badge unlocked: ${n}!`);confetti(120,true)},700)}})}
@@ -1069,16 +1165,16 @@ if(!deck){deck=starter.map(([w,m,e])=>({w,m,e,b:0,due:key}));S.set('plan:words',
 let flip=false;
 function due(){return deck.map((c,i)=>[c,i]).filter(([c])=>c.due<=key)}
 function renderWords(){
- const d=due();$('wDue').textContent=`${d.length} due`;
- if(!d.length)$('fcWrap').innerHTML=`<div class="fc"><div class="w">All clear</div><div class="m">No cards due. Add new words from today's reading or listening.</div></div>`;
+ renderDecks();const d=due();$('wDue').textContent=`${allDue()} due`;
+ if(!d.length)$('fcWrap').innerHTML=`<div class="fc"><div class="w">All clear</div><div class="m">No cards due in this deck. Come back tomorrow, or add new cards below.</div></div>`;
  else{const[c,i]=d[0];$('fcWrap').innerHTML=`<div class="fc" id="fc" role="button" tabindex="0"><div class="w">${esc(c.w)}</div>${flip?`<div class="m">${esc(c.m)}</div>${c.e?`<div class="e">${esc(c.e)}</div>`:''}`:`<div class="hint">Say the meaning out loud, then tap to check</div>`}</div>${flip?`<div class="rate"><button class="no" id="rNo">Forgot</button><button class="yes" id="rYes">Knew it</button></div>`:''}`;
   $('fc').onclick=()=>{$('fc').classList.add('out');setTimeout(()=>{flip=!flip;renderWords();$('fc')&&$('fc').classList.add('in')},150)};
   if(flip){$('rNo').onclick=()=>rate(i,false);$('rYes').onclick=()=>rate(i,true)}}
  $('wL').innerHTML=deck.map((c,i)=>`<li><span><b>${esc(c.w)}</b> · ${esc(c.m)}</span><span style="font-weight:400;color:var(--mute)">box ${c.b+1}<button class="x" data-i="${i}" aria-label="Delete">×</button></span></li>`).join('');
 }
-function rate(i,ok){const c=deck[i];c.b=ok?Math.min(c.b+1,gaps.length-1):0;c.due=addDays(key,ok?gaps[c.b]:1);S.set('plan:words',deck);flip=false;renderWords()}
-$('wF').onsubmit=e=>{e.preventDefault();deck.push({w:$('wW').value.trim(),m:$('wM').value.trim(),e:$('wE').value.trim(),b:0,due:key});S.set('plan:words',deck);e.target.reset();renderWords();toast('Word added')};
-$('wL').onclick=e=>{const b=e.target.closest('.x');if(!b)return;deck.splice(+b.dataset.i,1);S.set('plan:words',deck);renderWords()};
+function rate(i,ok){const c=deck[i];c.b=ok?Math.min(c.b+1,gaps.length-1):0;c.due=addDays(key,ok?gaps[c.b]:1);saveDeck();flip=false;renderWords()}
+$('wF').onsubmit=e=>{e.preventDefault();deck.push({w:$('wW').value.trim(),m:$('wM').value.trim(),e:$('wE').value.trim(),b:0,due:key});saveDeck();e.target.reset();renderWords();toast('Word added')};
+$('wL').onclick=e=>{const b=e.target.closest('.x');if(!b)return;deck.splice(+b.dataset.i,1);saveDeck();renderWords()};
 
 /* ---------- methods ---------- */
 const techs=[
@@ -1156,8 +1252,8 @@ const lib=[
 $('lib').innerHTML=lib.map(([g,items])=>`<h2 class="sec">${g}</h2><ul class="res">${items.map(([n,d,k,u])=>{const inner=`<span><b>${esc(n)}</b><span>${esc(d)}</span></span><em class="${k}">${k==='free'?'Free':'Paid'}</em>`;return`<li>${u?`<a href="${u}" target="_blank" rel="noopener">${inner}</a>`:`<a>${inner}</a>`}</li>`}).join('')}</ul>`).join('')+`<p class="note">Your phone has no laptop: for Bluebook, use a school computer or College Board's loan device on test day.</p>`;
 
 /* ---------- tools grid ---------- */
-const tiles=[['methods','Methods','How to study + playbooks','linear-gradient(135deg,#7c3aed,#d06bff)','✦'],['library','Library','Resources + exam formats','linear-gradient(135deg,#00a99d,#2ee8d2)','▤'],['errors','Error log','Mistakes come back until fixed','linear-gradient(135deg,#ff4d2e,#ff9b3d)','!'],['write','Writing studio','Timed essays + word count','linear-gradient(135deg,#2563ff,#00c8ff)','W'],['formulas','Formulas','Calc BC + Stats sheets, quiz','linear-gradient(135deg,#00c46a,#a3e635)','∫'],['words','Words','IELTS vocabulary cards','linear-gradient(135deg,#e11df0,#ff70d0)','Aa'],['screen','Screen time','Track it, push it down','linear-gradient(135deg,#ff9f00,#ffd60a)','⏱'],['backup','Backup','Copy or restore progress','linear-gradient(135deg,#4353ff,#9a7bff)','↺'],['settings','Settings','Theme, dates, install','linear-gradient(135deg,#3a4256,#7a849c)','⚙']];
-function renderTiles(){const ed=S.get('plan:errs',[]).filter(e=>!e.done&&e.due<=key).length,wd=due().length;
+const tiles=[['stats','Stats & badges','Level, rings, heatmap, scores','linear-gradient(135deg,#7c3aed,#ff1f7a)','★'],['words','Decks','Words, philosophy, economics','linear-gradient(135deg,#e11df0,#ff70d0)','Aa'],['methods','Methods','How to study + playbooks','linear-gradient(135deg,#7c3aed,#d06bff)','✦'],['library','Library','Resources + exam formats','linear-gradient(135deg,#00a99d,#2ee8d2)','▤'],['errors','Error log','Mistakes come back until fixed','linear-gradient(135deg,#ff4d2e,#ff9b3d)','!'],['write','Writing studio','Timed essays + word count','linear-gradient(135deg,#2563ff,#00c8ff)','W'],['formulas','Formulas','Calc BC + Stats sheets, quiz','linear-gradient(135deg,#00c46a,#a3e635)','∫'],['screen','Screen time','Track it, push it down','linear-gradient(135deg,#ff9f00,#ffd60a)','⏱'],['backup','Backup','Copy or restore progress','linear-gradient(135deg,#4353ff,#9a7bff)','↺'],['settings','Settings','Theme, dates, install','linear-gradient(135deg,#3a4256,#7a849c)','⚙']];
+function renderTiles(){const ed=S.get('plan:errs',[]).filter(e=>!e.done&&e.due<=key).length,wd=allDue();
  $('tiles').innerHTML=tiles.map(([v,t,s,c,g])=>{const badge=v==='errors'&&ed?` · ${ed} due`:v==='words'&&wd?` · ${wd} due`:'';return`<button class="tile" data-go="${v}"><i style="--tg:${c}">${g}</i><b>${t}</b><span>${s}${badge}</span></button>`}).join('')}
 
 /* ---------- error log ---------- */
@@ -1304,6 +1400,7 @@ $('stTilt').onchange=()=>{tiltOn=$('stTilt').checked;S.set('plan:tilt',tiltOn);i
 $('fab').onclick=()=>$('qaSheet').classList.add('open');
 $('qaClose').onclick=()=>$('qaSheet').classList.remove('open');
 $('qaSheet').onclick=e=>{if(e.target===$('qaSheet')){$('qaSheet').classList.remove('open');return}const b=e.target.closest('[data-qa]');if(!b)return;$('qaSheet').classList.remove('open');const q=b.dataset.qa;
+ if(q==='practice'){location.hash='practice';setTimeout(()=>startPractice(pick(['calc','stats','sat']),'ten'),150);return}
  if(q==='goal'){openGoals(false);return}if(q==='once'){openGoals(true);return}
  if(q==='score'){location.hash='today';setTimeout(()=>{$('scoreF').scrollIntoView({behavior:'smooth',block:'center'});$('scV').focus()},120)}
  else{location.hash=q;setTimeout(()=>{const f={errors:'eSrc',words:'wW',screen:'scMin',write:'wrText'}[q];if(f){$(f).scrollIntoView({behavior:'smooth',block:'center'});$(f).focus()}},150)}};
@@ -1321,23 +1418,168 @@ const FORMATS=[
 function renderFormats(){$('formats').innerHTML=FORMATS.map(([t,s,l])=>`<details><summary><span>${t}<small>${s}</small></span></summary><div class="dbody"><ul class="b">${l.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div></details>`).join('')+'<p class="note">Formats can change. Always check the official site before your exam.</p>'}
 
 function fSync(){const sel=$('fSub');if(!sel.options.length)sel.innerHTML=Object.values(SUBJ).map(s=>`<option>${s.n}</option>`).join('');if(!fState&&cur>=0&&tasks[cur])sel.value=tasks[cur].tag}
+/* ---------- practice engine ---------- */
+const R=(a,b)=>a+Math.floor(Math.random()*(b-a+1));
+const RN=(a,b)=>{let v=0;while(!v)v=R(a,b);return v};
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const r4=x=>Math.round(x*1e4)/1e4;
+const sg=(c,first)=>c<0?(first?'−':' − ')+Math.abs(c):(first?'':' + ')+c;
+const term=(c,p,first)=>{if(c===0)return'';const a=Math.abs(c),s=c<0?(first?'−':' − '):(first?'':' + ');const co=a===1&&p?'':a;return s+co+(p===0?'':p===1?'x':`x<sup>${p}</sup>`)};
+const cx=a=>a===1?'':a===-1?'−':String(a).replace('-','−');const nm=a=>String(a).replace('-','−');
+const fact=n=>n<2?1:n*fact(n-1);const C=(n,k)=>fact(n)/(fact(k)*fact(n-k));
+function erf(x){const t=1/(1+.3275911*Math.abs(x)),y=1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-.284496736)*t+.254829592)*t*Math.exp(-x*x);return x>=0?y:-y}
+const Phi=z=>.5*(1+erf(z/Math.SQRT2));
+const GEN={
+ calc:[
+  ['d-power','Derivative: power rule',()=>{const a=RN(-5,6),n=R(2,5),b=RN(-6,6),m=R(1,n-1),c=R(-9,9),p=R(-3,3);const ans=a*n*p**(n-1)+b*m*p**(m-1);return{q:`f(x) = ${term(a,n,1)}${term(b,m)}${c?sg(c):''}. Find f′(${nm(p)}).`,a:ans,sol:`f′(x) = ${a*n}x${n-1>1?`<sup>${n-1}</sup>`:''}${sg(b*m)}${m-1?`x${m-1>1?`<sup>${m-1}</sup>`:''}`:''}. Plug in x = ${p}: ${ans}.`}}],
+  ['d-chain','Derivative: chain rule',()=>{const a=RN(-4,4),b=R(-5,5),n=R(2,4),p=R(-2,2);const ans=n*a*(a*p+b)**(n-1);return{q:`f(x) = (${cx(a)}x${sg(b)})<sup>${n}</sup>. Find f′(${nm(p)}).`,a:ans,sol:`Chain rule: f′(x) = ${n}·(${a}x${sg(b)})<sup>${n-1}</sup>·${a}. At x = ${p}: ${n}·(${a*p+b})<sup>${n-1}</sup>·${a} = ${ans}.`}}],
+  ['d-product','Derivative: product rule',()=>{const a=RN(-4,4),b=R(-5,5),c=RN(-3,3),d=R(-5,5),p=R(-2,2);const ans=a*(c*p*p+d)+(a*p+b)*2*c*p;return{q:`f(x) = (${cx(a)}x${sg(b)})(${cx(c)}x<sup>2</sup>${sg(d)}). Find f′(${nm(p)}).`,a:ans,sol:`Product rule: f′ = u′v + uv′ = ${a}(${c}x²${sg(d)}) + (${a}x${sg(b)})(${2*c}x). At x = ${p}: ${a*(c*p*p+d)} + ${(a*p+b)*2*c*p} = ${ans}.`}}],
+  ['d-trig','Derivative: trig',()=>{const A=RN(-5,5),B=RN(-5,5),k=R(1,4);const ans=A*k;return{q:`f(x) = ${cx(A)} sin(${cx(k)}x)${sg(B)} cos(${cx(k)}x). Find f′(0).`,a:ans,sol:`f′(x) = ${A*k} cos(${k}x) − ${B*k} sin(${k}x). At 0: cos 0 = 1, sin 0 = 0, so f′(0) = ${ans}.`}}],
+  ['d-exp','Derivative: exp and ln',()=>{const k=R(1,3),m=R(1,5);const ans=k*Math.exp(k)+1;return{q:`f(x) = e<sup>${cx(k)}x</sup> + ln(${cx(m)}x). Find f′(1). (2 decimals)`,a:ans,sol:`f′(x) = ${k}e<sup>${k}x</sup> + 1/x (the ${m} cancels: d/dx ln(${m}x) = ${m}/(${m}x)). At 1: ${k}e<sup>${k}</sup> + 1 ≈ ${ans.toFixed(3)}.`}}],
+  ['int-poly','Definite integral',()=>{const a=R(-3,1),b=a+R(1,3),c2=RN(-3,3),c1=R(-4,4),c0=R(-5,5);const F=x=>c2*x**3/3+c1*x*x/2+c0*x;const ans=F(b)-F(a);return{q:`Evaluate ∫ from ${a} to ${b} of (${term(c2,2,1)}${term(c1,1)}${c0?sg(c0):''}) dx.`,a:ans,sol:`Antiderivative F(x) = ${r4(c2/3)}x³ + ${r4(c1/2)}x² + ${c0}x. F(${b}) − F(${a}) = ${r4(F(b))} − ${r4(F(a))} = ${r4(ans)}.`}}],
+  ['limit','Limits: removable',()=>{const a=RN(-6,6),b=RN(-6,6);const ans=a+b;const B=b-a,Cc=-a*b;return{q:`Find the limit as x → ${nm(a)} of (x<sup>2</sup>${B?sg(B)+'x':''}${Cc?sg(Cc):''}) / (x${sg(-a)}).`,a:ans,sol:`Factor: x²${B?sg(B)+'x':''}${Cc?sg(Cc):''} = (x${sg(-a)})(x${sg(b)}). Cancel (x${sg(-a)}), then plug in x = ${a}: ${a}${sg(b)} = ${ans}.`}}],
+  ['avg','Average value',()=>{const c=R(1,6),b=R(1,6);const ans=c*b*b/3;return{q:`Average value of f(x) = ${cx(c)}x<sup>2</sup> on [0, ${b}]?`,a:ans,sol:`Average = (1/${b})∫₀^${b} ${c}x² dx = (1/${b})·${c}·${b}³/3 = ${r4(ans)}.`}}],
+  ['geo','Series: geometric sum',()=>{const a=R(1,9),q=R(2,6),p=R(1,q-1);const ans=a/(1-p/q);return{q:`Find the sum: Σ from n = 0 to ∞ of ${a}·(${p}/${q})<sup>n</sup>.`,a:ans,sol:`Geometric with first term ${a}, ratio ${p}/${q} (|r| < 1). Sum = a/(1 − r) = ${a}/(1 − ${p}/${q}) = ${r4(ans)}.`}}],
+  ['taylor','Taylor coefficient',()=>{const k=RN(-3,3),n=R(2,4);const ans=k**n/fact(n);return{q:`In the Maclaurin series of e<sup>${cx(k)}x</sup>, what is the coefficient of x<sup>${n}</sup>?`,a:ans,sol:`e<sup>u</sup> = Σ uⁿ/n!, with u = ${k}x. Coefficient of x<sup>${n}</sup> = ${k}<sup>${n}</sup>/${n}! = ${k**n}/${fact(n)} = ${r4(ans)}.`}}],
+  ['euler','Euler\'s method',()=>{const y0=R(-2,3),h=pick([.1,.2,.5]);let x=0,y=y0;for(let i=0;i<2;i++){y=y+h*(x+y);x+=h}const ans=y;return{q:`dy/dx = x + y, y(0) = ${y0}. Use Euler's method with step ${h}, 2 steps. Estimate y(${r4(2*h)}).`,a:ans,sol:`Step 1: y₁ = ${y0} + ${h}(0 + ${y0}) = ${r4(y0+h*y0)}. Step 2: y₂ = y₁ + ${h}(${h} + y₁) = ${r4(ans)}.`}}],
+  ['param','Parametric slope',()=>{const c=R(-4,4),t=RN(-3,3);const ans=(3*t*t+c)/(2*t);return{q:`x = t<sup>2</sup>, y = t<sup>3</sup>${c?sg(c)+'t':''}. Find dy/dx at t = ${t}.`,a:ans,sol:`dy/dx = (dy/dt)/(dx/dt) = (3t²${c?sg(c):''})/(2t). At t = ${t}: ${3*t*t+c}/${2*t} = ${r4(ans)}.`}}],
+  ['polar','Polar area',()=>{const a=R(1,5),fr=pick([[1,2,'π/2'],[1,1,'π'],[1,4,'π/4']]);const ans=.5*a*a*Math.PI*fr[0]/fr[1];return{q:`Area enclosed by r = ${a} for 0 ≤ θ ≤ ${fr[2]}? (decimal or use pi)`,a:ans,sol:`A = ½∫ r² dθ = ½·${a*a}·${fr[2]} = ${r4(ans)}.`}}]],
+ stats:[
+  ['z','z-scores',()=>{const mu=R(40,80),sd=R(4,12),x=mu+R(-25,25);const ans=(x-mu)/sd;return{q:`Scores have mean ${mu} and SD ${sd}. What is the z-score of ${x}?`,a:ans,sol:`z = (x − μ)/σ = (${x} − ${mu})/${sd} = ${r4(ans)}.`}}],
+  ['normal','Normal probability',()=>{const z=R(-200,200)/100;const ans=Phi(z);return{q:`Z is standard normal. Find P(Z < ${z.toFixed(2)}). (4 decimals ok)`,a:ans,tol:.002,sol:`Use normalcdf(−∞, ${z.toFixed(2)}) = ${ans.toFixed(4)}. Sketch the curve: ${z<0?'less than half the area':'more than half the area'}.`}}],
+  ['binom','Binomial probability',()=>{const n=R(4,8),k=R(1,n-1),p=pick([.2,.3,.4,.5,.6]);const ans=C(n,k)*p**k*(1-p)**(n-k);return{q:`X ~ Binomial(n = ${n}, p = ${p}). Find P(X = ${k}).`,a:ans,tol:.001,sol:`P = C(${n},${k})·${p}<sup>${k}</sup>·${r4(1-p)}<sup>${n-k}</sup> = ${C(n,k)}·${r4(p**k)}·${r4((1-p)**(n-k))} = ${ans.toFixed(4)}.`}}],
+  ['geom','Geometric probability',()=>{const p=pick([.1,.2,.25,.3,.5]),k=R(1,5);const ans=(1-p)**(k-1)*p;return{q:`Each attempt succeeds with probability ${p}. P(first success on attempt ${k})?`,a:ans,tol:.001,sol:`(1 − p)<sup>k−1</sup>·p = ${r4(1-p)}<sup>${k-1}</sup>·${p} = ${ans.toFixed(4)}.`}}],
+  ['ev','Expected value',()=>{const xs=[R(0,3),R(4,7),R(8,12)];const a=R(1,6),b=R(1,9-a),c=10-a-b;const ps=[a/10,b/10,c/10];const ans=xs.reduce((s,x,i)=>s+x*ps[i],0);return{q:`X takes values ${xs.join(', ')} with probabilities ${ps.join(', ')}. Find E(X).`,a:ans,sol:`E(X) = Σ x·P(x) = ${xs.map((x,i)=>`${x}(${ps[i]})`).join(' + ')} = ${r4(ans)}.`}}],
+  ['mean','Mean',()=>{const d=[...Array(5)].map(()=>R(1,30));const ans=d.reduce((a,b)=>a+b)/5;return{q:`Find the mean of: ${d.join(', ')}.`,a:ans,sol:`Sum = ${d.reduce((a,b)=>a+b)}. Divide by 5: ${r4(ans)}.`}}],
+  ['sd','Sample SD',()=>{const d=[...Array(5)].map(()=>R(1,20));const m=d.reduce((a,b)=>a+b)/5;const ans=Math.sqrt(d.reduce((s,x)=>s+(x-m)**2,0)/4);return{q:`Find the sample standard deviation s of: ${d.join(', ')}.`,a:ans,tol:.01,sol:`Mean = ${r4(m)}. Σ(x − x̄)² = ${r4(d.reduce((s,x)=>s+(x-m)**2,0))}. Divide by n − 1 = 4, take √: s ≈ ${ans.toFixed(3)}.`}}],
+  ['lsrl','Regression slope',()=>{const r=R(-95,95)/100,sx=R(2,9),sy=R(2,15);const ans=r*sy/sx;return{q:`r = ${r}, s<sub>x</sub> = ${sx}, s<sub>y</sub> = ${sy}. Find the slope b of the least-squares line.`,a:ans,sol:`b = r·s<sub>y</sub>/s<sub>x</sub> = ${r}·${sy}/${sx} = ${r4(ans)}.`}}],
+  ['moe','Margin of error',()=>{const n=pick([100,200,400,500,1000]),ph=R(20,80)/100;const ans=1.96*Math.sqrt(ph*(1-ph)/n);return{q:`p̂ = ${ph}, n = ${n}. Margin of error for a 95% confidence interval (z* = 1.96)?`,a:ans,tol:.001,sol:`ME = z*√(p̂(1 − p̂)/n) = 1.96·√(${ph}·${r4(1-ph)}/${n}) = ${ans.toFixed(4)}.`}}],
+  ['cond','Conditional probability',()=>{const a=R(10,40),b=R(10,40),c=R(10,40),d=R(10,40);const ans=a/(a+c);return{q:`Two-way table: Studied & Passed = ${a}, Not studied & Passed = ${b}, Studied & Failed = ${c}, Not studied & Failed = ${d}. P(Passed | Studied)?`,a:ans,tol:.001,sol:`Given studied: ${a} + ${c} = ${a+c} students. Of those, ${a} passed. ${a}/${a+c} = ${ans.toFixed(4)}.`}}]],
+ sat:[
+  ['lin','Linear equations',()=>{const x=RN(-9,9),a=RN(-7,9),b=R(-20,20);return{q:`If ${cx(a)}x${sg(b)} = ${nm(a*x+b)}, what is x?`,a:x,sol:`Subtract ${b}: ${a}x = ${a*x}. Divide by ${a}: x = ${x}.`}}],
+  ['sys','Systems of equations',()=>{const x=R(-6,6),y=R(-6,6);let a,b,c,d;do{a=RN(-5,5);b=RN(-5,5);c=RN(-5,5);d=RN(-5,5)}while(a*d-b*c===0);return{q:`${cx(a)}x${b<0?' − ':' + '}${cx(Math.abs(b))}y = ${nm(a*x+b*y)} and ${cx(c)}x${d<0?' − ':' + '}${cx(Math.abs(d))}y = ${nm(c*x+d*y)}. What is x + y?`,a:x+y,sol:`Solve by elimination: x = ${x}, y = ${y}, so x + y = ${x+y}. Tip: Desmos can graph both lines and show the intersection.`}}],
+  ['pct','Percent change',()=>{const o=R(20,200),pct=pick([-30,-25,-20,-15,-10,10,12,15,20,25,40,50]);const n=o*(1+pct/100);const ans=pct;return{q:`A price goes from ${o} to ${r4(n)}. What is the percent change? (e.g. −20 for a 20% drop)`,a:ans,sol:`(new − old)/old × 100 = (${r4(n)} − ${o})/${o} × 100 = ${ans}%.`}}],
+  ['vertex','Quadratics: vertex',()=>{const a=RN(-4,4),h=R(-6,6),k=R(-9,9);const b=-2*a*h,c=a*h*h+k;return{q:`y = ${term(a,2,1)}${term(b,1)}${c?sg(c):''}. What is the x-coordinate of the vertex?`,a:h,sol:`x = −b/(2a) = ${-b}/${2*a} = ${h}.`}}],
+  ['roots','Quadratics: sum of roots',()=>{const r1=R(-8,8),r2=R(-8,8),a=RN(-3,3);const b=-a*(r1+r2),c=a*r1*r2;return{q:`What is the sum of the solutions of ${term(a,2,1)}${term(b,1)}${c?sg(c):''} = 0?`,a:r1+r2,sol:`Sum of roots = −b/a = ${-b}/${a} = ${r1+r2}.`}}],
+  ['slope','Slope',()=>{const x1=R(-9,9),y1=R(-9,9),x2=x1+RN(-6,6),y2=R(-9,9);const ans=(y2-y1)/(x2-x1);return{q:`What is the slope of the line through (${x1}, ${y1}) and (${x2}, ${y2})?`,a:ans,sol:`(y₂ − y₁)/(x₂ − x₁) = (${y2-y1})/(${x2-x1}) = ${r4(ans)}.`}}],
+  ['expo','Exponential growth',()=>{const P=R(1,9)*100,r=pick([2,3,5,8,10]),t=R(2,5);const ans=P*(1+r/100)**t;return{q:`${P} grows by ${r}% per year. Value after ${t} years? (nearest whole number ok)`,a:ans,tol:.6,sol:`${P}·(1.${pad(r)})<sup>${t}</sup> ≈ ${ans.toFixed(2)}.`}}]]
+};
+const PSUB={calc:['Calculus','calc'],stats:['Statistics','stats'],sat:['SAT Math','sat']};
+function parseAns(s){s=String(s).toLowerCase().replace(/\s+/g,'').replace(/π/g,'pi').replace(/√/g,'sqrt').replace(/−/g,'-').replace(/,/g,'.');if(!s||!/^[0-9.+\-*/()^a-z]*$/.test(s))return NaN;if(/[a-z]/.test(s.replace(/pi|sqrt|e/g,'')))return NaN;
+ s=s.replace(/sqrt/g,'S').replace(/pi/g,'P').replace(/e/g,'E').replace(/(\d|\))(?=[PSE(])/g,'$1*').replace(/([PE])(?=[\d(PSE])/g,'$1*').replace(/\^/g,'**').replace(/S/g,'Math.sqrt').replace(/P/g,'Math.PI').replace(/E/g,'Math.E');
+ try{const v=Function('"use strict";return ('+s+')')();return typeof v==='number'?v:NaN}catch(e){return NaN}}
+let PS=null;
+function topicStats(){return S.get('plan:ptopics',{})}
+function weakFirst(sub){const ts=topicStats();return GEN[sub].slice().sort((a,b)=>{const A=ts[a[0]]||{c:0,n:0},B=ts[b[0]]||{c:0,n:0};const ra=A.n?A.c/A.n:.5,rb=B.n?B.c/B.n:.5;return ra-rb})}
+function startPractice(sub,mode,topic){
+ const pool=topic?GEN[sub].filter(g=>g[0]===topic):mode==='weak'?weakFirst(sub).slice(0,4):GEN[sub];
+ PS={sub,mode,pool,n:0,c:0,streak:0,best:0,t0:Date.now(),end:mode==='sprint'?Date.now()+120e3:null,total:mode==='ten'||mode==='weak'?10:null,q:null,checked:false};
+ nextQ();
+}
+function nextQ(){const g=pick(PS.pool);const q=g[2]();PS.q=Object.assign(q,{id:g[0],tn:g[1]});PS.checked=false;renderPractice()}
+function checkQ(){if(!PS||PS.checked)return;const v=parseAns($('pIn').value);if(isNaN(v)){toast('Type a number, e.g. 2.5, -3/4, 2pi');return}
+ const q=PS.q,tol=q.tol||Math.max(.01,Math.abs(q.a)*.005),ok=Math.abs(v-q.a)<=tol;
+ PS.checked=true;PS.n++;if(ok){PS.c++;PS.streak++;PS.best=Math.max(PS.best,PS.streak);tap();confetti(20)}else{PS.streak=0;try{navigator.vibrate&&navigator.vibrate([60,40,60])}catch(e){}}
+ const ts=topicStats();ts[q.id]=ts[q.id]||{c:0,n:0};ts[q.id].n++;if(ok)ts[q.id].c++;S.set('plan:ptopics',ts);
+ if(ok)S.set('plan:pxp',S.get('plan:pxp',0)+2);
+ PS.last={ok,v};renderPractice()}
+function finishPractice(){if(!PS)return;const mins=Math.max(1,Math.round((Date.now()-PS.t0)/6e4));logMin(PSUB[PS.sub][0]==='SAT Math'?'SAT':PSUB[PS.sub][0],mins);
+ const hist=S.get('plan:psess',[]);hist.push({d:key,s:PS.sub,m:PS.mode,c:PS.c,n:PS.n,min:mins});S.set('plan:psess',hist);
+ PS.done=true;PS.mins=mins;renderPractice();checkBadges();if(PS.n&&PS.c/PS.n>=.8)confetti(100,true)}
+function renderPractice(){
+ const w=$('pArea');
+ if(!PS){
+  const ts=topicStats();
+  w.innerHTML=`<div class="pick">${Object.entries(PSUB).map(([k,[n,s]])=>`<button class="pbig" data-s="${k}" style="background:${grad(s)};--edge:${SUBJ[s].e}"><i>${SUBJ[s].i}</i><b>${n}</b><span>${GEN[k].length} topics</span></button>`).join('')}</div>
+  <div class="seg" id="pMode" style="margin-top:14px">${[['ten','10 questions'],['sprint','2-min sprint'],['weak','Weakest topics'],['free','Endless']].map(([m,l])=>`<button data-m="${m}" class="${m===(S.get('plan:pmode','ten'))?'on':''}">${l}</button>`).join('')}</div>
+  <h2 class="sec">Topics</h2><p class="sub">Tap a topic to drill just that. Bars show your accuracy.</p>
+  ${Object.entries(GEN).map(([k,gs])=>`<details><summary><span>${PSUB[k][0]}<small>${gs.reduce((a,g)=>a+((ts[g[0]]||{}).n||0),0)} answered</small></span></summary><div class="dbody">${gs.map(g=>{const t=ts[g[0]]||{c:0,n:0},p=t.n?Math.round(t.c/t.n*100):null;return`<button class="trow" data-s="${k}" data-t="${g[0]}"><span>${g[1]}</span><span class="acc"><i style="width:${p??0}%;background:${p==null?'transparent':p>=80?'#00c46a':p>=50?'#ffb300':'#ff4d2e'}"></i></span><em>${p==null?'new':p+'%'}</em></button>`}).join('')}</div></details>`).join('')}
+  <h2 class="sec">Recent sessions</h2><ul class="log">${S.get('plan:psess',[]).slice(-6).reverse().map(x=>`<li><span>${esc(x.d)} · ${PSUB[x.s][0]} · ${x.min} min</span><span>${x.c}/${x.n}</span></li>`).join('')||'<li><span class="note">No sessions yet.</span><span></span></li>'}</ul>`;
+  w.querySelectorAll('.pbig').forEach(b=>b.onclick=()=>startPractice(b.dataset.s,S.get('plan:pmode','ten')));
+  $('pMode').onclick=e=>{const b=e.target.closest('button');if(!b)return;S.set('plan:pmode',b.dataset.m);renderPractice()};
+  w.querySelectorAll('.trow').forEach(b=>b.onclick=()=>startPractice(b.dataset.s,'free',b.dataset.t));
+  return}
+ const s=PSUB[PS.sub][1];
+ if(PS.done){const p=PS.n?Math.round(PS.c/PS.n*100):0;
+  w.innerHTML=`<div class="card in" style="background:${grad(s)};--edge:${SUBJ[s].e}"><span class="tag">Session done</span><h2>${PS.c} / ${PS.n} correct</h2><p>${p}% · best streak ${PS.best} · ${PS.mins} min logged · +${PS.c*2} XP</p><div class="how">${p>=90?'Excellent. Try a harder topic or a sprint.':p>=70?'Solid. Redo the misses tomorrow.':'Look at the solutions, then drill your weakest topic.'}</div><div class="acts"><button class="skip" id="pBack">Menu</button><button class="go" id="pAgain">Go again</button></div></div>`;
+  $('pBack').onclick=()=>{PS=null;renderPractice()};$('pAgain').onclick=()=>startPractice(PS.sub,PS.mode,PS.pool.length===1?PS.pool[0][0]:null);return}
+ const q=PS.q,left=PS.end?Math.max(0,Math.round((PS.end-Date.now())/1e3)):null;
+ w.innerHTML=`<div class="pbar"><span>${PSUB[PS.sub][0]} · ${esc(q.tn)}</span><span>${PS.c}/${PS.n}${PS.total?` · Q${Math.min(PS.n+(PS.checked?0:1),PS.total)}/${PS.total}`:''}${left!=null?` · <b id="pClock">${fmt(left)}</b>`:''}${PS.streak>1?` · 🔥${PS.streak}`:''}</span></div>
+ <div class="card qcard${PS.checked?(PS.last.ok?' ok':' bad'):' in'}" style="background:${grad(s)};--edge:${SUBJ[s].e}"><div class="qtext">${q.q}</div>
+ <div class="ans"><input id="pIn" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Your answer" ${PS.checked?'disabled':''} value="${PS.checked?esc($('pIn')?.value||''):''}"><button class="go" id="pChk">${PS.checked?'Next →':'Check'}</button></div>
+ ${PS.checked?'':`<div class="keys">${['−','/','.','π','√(','^','e','(',')'].map(k=>`<button data-k="${k}">${k}</button>`).join('')}</div>`}
+ ${PS.checked?`<div class="verdict">${PS.last.ok?'Correct!':`Not quite. Answer: <b>${r4(q.a)}</b>`}</div><div class="how sol">${q.sol}</div>${PS.last.ok?'':'<button class="ghost wbtn2" id="pErr">+ Add to error log</button>'}`:''}</div>
+ <div class="row2" style="margin-top:14px"><button class="ghost" id="pEnd">End session</button>${PS.checked?'':'<button class="ghost" id="pSkip">Skip</button>'}</div>`;
+ const inp=$('pIn');if(!PS.checked){inp.focus({preventScroll:true});inp.onkeydown=e=>{if(e.key==='Enter')checkQ()}}
+ $('pChk').onclick=()=>{if(!PS.checked)checkQ();else if((PS.total&&PS.n>=PS.total)||(PS.end&&Date.now()>=PS.end))finishPractice();else nextQ()};
+ w.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{const k=b.dataset.k==='−'?'-':b.dataset.k;inp.value+=k;inp.focus()});
+ $('pEnd').onclick=finishPractice;if($('pSkip'))$('pSkip').onclick=()=>{PS.n++;PS.streak=0;nextQ()};
+ if($('pErr'))$('pErr').onclick=()=>{const tmp=document.createElement('div');tmp.innerHTML=q.q;errs.push({id:uid(),d:key,sub:{calc:'Calc BC',stats:'Stats',sat:'SAT Math'}[PS.sub],type:'concept',src:`Practice · ${q.tn}: ${tmp.textContent}`.slice(0,180),fix:(()=>{const t=document.createElement('div');t.innerHTML=q.sol;return t.textContent})(),due:addDays(key,1),n:0,done:false});saveE();$('pErr').disabled=true;$('pErr').textContent='Added: comes back tomorrow'};
+}
+setInterval(()=>{if(PS&&PS.end&&!PS.done&&$('v-practice').classList.contains('on')){const l=Math.max(0,Math.round((PS.end-Date.now())/1e3));if($('pClock'))$('pClock').textContent=fmt(l);if(l<=0&&!PS.checked){buzz();finishPractice()}}},500);
+
+/* ---------- decks ---------- */
+const STARTERS={
+ phil:[['Categorical imperative','Act only on a rule you could will to be a universal law.','Kant'],['Utilitarianism','The right act is the one that produces the most overall happiness.','Bentham, Mill'],['Social contract','Political authority comes from the agreement of the people.','Hobbes, Locke, Rousseau'],['Cogito','"I think, therefore I am": the one certainty that survives radical doubt.','Descartes'],['Empiricism','All knowledge comes from sense experience.','Locke, Hume'],['Rationalism','Some knowledge comes from reason alone, independent of experience.','Descartes, Leibniz'],['Problem of induction','Past patterns cannot logically guarantee future ones.','Hume'],['Is–ought gap','You cannot derive what ought to be from facts about what is alone.','Hume'],['Virtue ethics','Morality is about good character and human flourishing (eudaimonia).','Aristotle'],['Veil of ignorance','Choose principles of justice without knowing your place in society.','Rawls'],['Harm principle','Power over someone is justified only to prevent harm to others.','Mill'],['Existentialism','Existence precedes essence: we create our own meaning.','Sartre'],['Gettier problem','Justified true belief may still not be knowledge.','Gettier'],['Allegory of the cave','Most people mistake shadows for reality; philosophy turns us toward the light.','Plato'],['Banality of evil','Great evil can be done by ordinary people who simply stop thinking.','Arendt'],['Falsifiability','A theory is scientific only if some observation could prove it false.','Popper'],['Paradigm shift','Science changes through revolutions, not only steady progress.','Kuhn'],['Mind–body problem','How do mental states relate to the physical body and brain?','Descartes and after'],['Trolley problem','Is it right to kill one to save five? Tests consequences vs. duties.','Foot, Thomson'],['Will to power','The basic drive in life is to grow, overcome and assert oneself.','Nietzsche']],
+ econ:[['Opportunity cost','The value of the next best alternative you give up.','Every choice has one.'],['Price elasticity of demand','% change in quantity demanded ÷ % change in price.','|E| > 1 means elastic.'],['Marginal cost','The extra cost of producing one more unit.','Firms produce where MR = MC.'],['Nash equilibrium','No player can do better by changing strategy alone.','Prisoner\'s dilemma.'],['Externality','A cost or benefit to third parties not reflected in the price.','Pollution is a negative one.'],['Public good','Non-rival and non-excludable.','Street lighting, national defence.'],['Deadweight loss','Total surplus lost because the quantity is not efficient.','Caused by taxes, monopoly.'],['Monopoly output rule','Produce where MR = MC, charge the price from the demand curve.','P > MC, so there is deadweight loss.'],['Comparative advantage','Produce what you have the lower opportunity cost in, then trade.','Ricardo.'],['GDP','Market value of all final goods and services produced in a country in a period.','C + I + G + (X − M).'],['Inflation','A sustained rise in the general price level.','Measured by CPI.'],['Money multiplier','1 ÷ reserve requirement.','10% reserves → multiplier 10.'],['Fiscal policy','Government spending and taxes used to influence the economy.','Expansionary: spend more, tax less.'],['Monetary policy','The central bank\'s control of money supply and interest rates.','Open market operations.'],['Short-run Phillips curve','Inverse relationship between inflation and unemployment.','Long run: vertical at the natural rate.'],['Adverse selection','Hidden information before a deal drives out the good types.','Market for lemons (Akerlof).'],['Moral hazard','Taking more risk because someone else bears the cost.','Insurance, bailouts.'],['Real interest rate','Nominal interest rate − inflation rate.','Fisher equation.'],['Crowding out','Government borrowing raises interest rates and cuts private investment.','Loanable funds market.'],['Consumer surplus','What buyers are willing to pay minus what they pay.','Area under demand, above price.']]};
+let DECKS=S.get('plan:decklist',[{id:'words',n:'IELTS words'},{id:'phil',n:'Philosophy ideas'},{id:'econ',n:'Economics terms'}]);
+let deckId=S.get('plan:deckcur','words');if(!DECKS.some(d=>d.id===deckId))deckId='words';
+const dk=id=>id==='words'?'plan:words':'plan:deck:'+id;
+function loadDeck(id){let d=S.get(dk(id),null);if(!d){d=id==='words'?starter.map(([w,m,e])=>({w,m,e,b:0,due:key})):(STARTERS[id]||[]).map(([w,m,e],i)=>({w,m,e,b:0,due:addDays(key,Math.floor(i/5))}));S.set(dk(id),d)}return d}
+function saveDeck(){S.set(dk(deckId),deck)}
+function allDue(){return DECKS.reduce((a,d)=>a+loadDeck(d.id).filter(c=>c.due<=key).length,0)}
+function renderDecks(){$('deckBar').innerHTML=DECKS.map(d=>{const n=loadDeck(d.id).filter(c=>c.due<=key).length;return`<button class="${d.id===deckId?'on':''}" data-d="${d.id}">${esc(d.n)}${n?` <b>${n}</b>`:''}</button>`}).join('')+'<button data-d="+" aria-label="New deck">+ New deck</button>'}
+$('deckBar').onclick=e=>{const b=e.target.closest('[data-d]');if(!b)return;if(b.dataset.d==='+'){$('newDeck').hidden=!$('newDeck').hidden;if(!$('newDeck').hidden)$('ndName').focus();return}deckId=b.dataset.d;S.set('plan:deckcur',deckId);deck=loadDeck(deckId);flip=false;renderWords()};
+$('newDeck').onsubmit=e=>{e.preventDefault();const n=$('ndName').value.trim();if(!n)return;const id=uid();DECKS.push({id,n});S.set('plan:decklist',DECKS);S.set(dk(id),[]);deckId=id;S.set('plan:deckcur',id);deck=[];$('newDeck').hidden=true;e.target.reset();renderWords();toast('Deck created. Add cards below.')};
+
+/* ---------- ambient sound + zen ---------- */
+let amb=null;
+function ambient(kind){try{if(amb){amb.src.stop();amb=null}if(kind==='off')return;if(!actx)actx=new(window.AudioContext||window.webkitAudioContext)();
+ const len=actx.sampleRate*4,buf=actx.createBuffer(2,len,actx.sampleRate);
+ for(let ch=0;ch<2;ch++){const d=buf.getChannelData(ch);let last=0,b0=0,b1=0,b2=0;for(let i=0;i<len;i++){const w=Math.random()*2-1;
+  if(kind==='brown'){last=(last+.02*w)/1.02;d[i]=last*3.5}
+  else if(kind==='pink'){b0=.99765*b0+w*.099;b1=.963*b1+w*.2965;b2=.57*b2+w*1.0526;d[i]=(b0+b1+b2+w*.1848)*.11}
+  else if(kind==='rain'){last=(last+.02*w)/1.02;d[i]=last*2+(Math.random()<.0009?(Math.random()*2-1)*.6:0)+w*.035}
+  else d[i]=w*.25}}
+ const src=actx.createBufferSource();src.buffer=buf;src.loop=true;const g=actx.createGain();g.gain.value=S.get('plan:vol',.5);
+ let node=src;if(kind==='rain'){const f=actx.createBiquadFilter();f.type='lowpass';f.frequency.value=2400;src.connect(f);node=f}
+ node.connect(g).connect(actx.destination);src.start();amb={src,g}}catch(e){toast('Sound is not available here')}}
+
+deck=loadDeck(deckId);
+/* ---------- focus sounds, zen, onboarding ---------- */
+$('vol').value=S.get('plan:vol',.5);
+$('vol').oninput=()=>{S.set('plan:vol',+$('vol').value);if(amb)amb.g.gain.value=+$('vol').value};
+$('amb').onclick=e=>{const b=e.target.closest('[data-a]');if(!b)return;document.querySelectorAll('#amb button').forEach(x=>x.classList.toggle('on',x===b));ambient(b.dataset.a)};
+function zenTick(){if($('zen').hidden)return;const l=fState?(fState.paused?fState.left:Math.max(0,fState.at-Date.now())):presets[fp][1]*6e4;$('zTime').textContent=fmt(l/1e3);$('zMode').textContent=fState?(fState.mode==='focus'?(fState.paused?'Paused':'Focus'):'Break'):'Ready';$('zSub').textContent=$('fSub').value;$('zGo').textContent=!fState?'Start':fState.paused?'Resume':'Pause';const k=subOf($('fSub').value);$('zen').style.background=fState&&fState.mode==='break'?'linear-gradient(135deg,#00c46a,#a3e635)':grad(k)}
+$('fZen').onclick=()=>{$('zen').hidden=false;zenTick();try{document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen().catch(()=>{})}catch(e){}};
+$('zX').onclick=()=>{$('zen').hidden=true;try{document.fullscreenElement&&document.exitFullscreen()}catch(e){}};
+$('zGo').onclick=()=>{$('fGo').click();zenTick()};
+setInterval(zenTick,500);
+function onboard(){if(S.get('plan:onb',false)||goals.length)return;let sel=new Set([0,1,2]);
+ const draw=()=>{$('obG').innerHTML=TPL.slice(0,8).map((t,i)=>`<button class="${sel.has(i)?'on':''}" data-i="${i}" style="--g:${grad(t[1])};--edge:${SUBJ[t[1]].e}"><i>${SUBJ[t[1]].i}</i>${t[0]}<span>${t[2]} min</span></button>`).join('')};draw();
+ $('obG').onclick=e=>{const b=e.target.closest('[data-i]');if(!b)return;const i=+b.dataset.i;sel.has(i)?sel.delete(i):sel.add(i);draw()};
+ $('onb').classList.add('open');
+ $('obGo').onclick=()=>{const n=$('obName').value.trim();if(n)S.set('plan:name',n);[...sel].sort((a,b)=>a-b).forEach(i=>{const[t,s,m,no]=TPL[i];goals.push({id:uid(),name:t,sub:s,min:m,days:[1,2,3,4,5],note:no,on:true})});saveG();S.set('plan:onb',true);$('onb').classList.remove('open');refresh();greet();confetti(160,true);toast(sel.size?`${sel.size} goals set for weekdays. Change them in Goals.`:'All set. Add goals in the Goals tab.')};
+ $('obSkip').onclick=()=>{S.set('plan:onb',true);$('onb').classList.remove('open')}}
+function greet(){const hr=new Date().getHours(),nm=S.get('plan:name','');$('hi').textContent=(hr<5?'Late night':hr<12?'Good morning':hr<18?'Good afternoon':'Good evening')+(nm?`, ${nm}`:'')+(streak()?` · ${streak()}-day streak`:'')}
+
 /* ---------- router ---------- */
-const views=['today','goals','focus','stats','tools','methods','library','words','errors','write','formulas','screen','backup','settings'];
-const sub={words:1,errors:1,write:1,formulas:1,screen:1,backup:1,settings:1,methods:1,library:1};
+const views=['today','goals','practice','focus','stats','tools','methods','library','words','errors','write','formulas','screen','backup','settings'];
+const sub={stats:1,words:1,errors:1,write:1,formulas:1,screen:1,backup:1,settings:1,methods:1,library:1};
 function show(){let v=location.hash.slice(1);if(!views.includes(v))v='today';
  views.forEach(x=>$('v-'+x).classList.toggle('on',x===v));
- const nv=sub[v]?'tools':v;$('fab').hidden=!(v==='today'||v==='tools'||v==='stats');document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===nv));
- ({words:renderWords,errors:renderErrors,write:()=>{renderWrite();renderHist()},formulas:renderFm,screen:renderScreen,tools:renderTiles,settings:renderSettings,backup:renderBk,goals:()=>{renderGoals();renderForm()},stats:()=>{renderStats();renderRings();renderLevel();renderHeat();renderBadges();renderCourses()},library:renderFormats,today:()=>{chips();renderToday()},focus:fSync})[v]?.();window.scrollTo(0,0)}
+ const nv=sub[v]?'tools':v;$('fab').hidden=!(v==='today'||v==='tools'||v==='stats');$('pAcc').textContent=(()=>{const t=Object.values(topicStats());const n=t.reduce((a,x)=>a+x.n,0),c=t.reduce((a,x)=>a+x.c,0);return n?`${Math.round(c/n*100)}% of ${n}`:''})();document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===nv));
+ ({words:renderWords,errors:renderErrors,write:()=>{renderWrite();renderHist()},formulas:renderFm,screen:renderScreen,tools:renderTiles,settings:renderSettings,backup:renderBk,goals:()=>{renderGoals();renderForm()},stats:()=>{renderStats();renderRings();renderLevel();renderHeat();renderBadges();renderCourses()},library:renderFormats,practice:renderPractice,today:()=>{chips();renderToday()},focus:fSync})[v]?.();window.scrollTo(0,0)}
 $('nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;if(location.hash==='#'+b.dataset.v)show();else location.hash=b.dataset.v};
 document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)location.hash=g.dataset.go});
 window.addEventListener('hashchange',show);
 
 const dstr=now.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'});
 $('date').textContent=dstr;$('fToday').textContent=dstr;
-{const hr=now.getHours();$('hi').textContent=(hr<5?'Late night':hr<12?'Good morning':hr<18?'Good afternoon':'Good evening')+(streak()?` · ${streak()}-day streak`:' · let\'s go')}
+greet();
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'){if(kOf(new Date())!==key)location.reload();else if((endAt&&endAt.at>Date.now())||(fState&&!fState.paused))awake(true)}});
 setInterval(()=>{if(kOf(new Date())!==key&&document.visibilityState==='visible')location.reload()},60000);
-fSync();chips();renderCourses();renderToday(true);banner();checkBadges();fRenderPresets();fTick();renderWords();show();
+fSync();chips();renderCourses();renderToday(true);banner();checkBadges();onboard();fRenderPresets();fTick();renderWords();show();
 const clock=setInterval(()=>{tickToday();if(fState)fTick();if(wr.endAt&&$('v-write').classList.contains('on'))wTick()},1000);
 }
 </script>
