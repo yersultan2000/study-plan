@@ -498,6 +498,48 @@ input:focus,select:focus,textarea:focus{outline:3px solid #ff9f00;outline-offset
 .sheet section{max-height:92vh;overflow:auto;border-radius:30px 30px 0 0}
 input[type=range]{accent-color:#ff1f7a}
 
+/* ===== v9: daily learning, new words, essay check ===== */
+[hidden]{display:none!important}
+.daily{margin:22px 0 4px;padding:16px;border-radius:28px;background:var(--card);box-shadow:0 6px 0 var(--edge0),var(--lift)}
+.dlhead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
+.dlhead b{display:block;font:900 18px Unbounded,sans-serif}.dlhead span{font-size:13px;color:var(--mute);font-weight:700}
+.lfire{flex:none;text-align:center;font:900 26px Unbounded,sans-serif;color:#fff;background:linear-gradient(135deg,#ff4d2e,#ffb300);border-radius:18px;padding:6px 12px;box-shadow:0 4px 0 #c22d10;line-height:1}
+.lfire small{display:block;font:800 10px Figtree,sans-serif;color:#fff;opacity:.9}
+.dlgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.dl{border:0;border-radius:20px;padding:12px;text-align:left;color:#fff;background:var(--g);min-height:106px;display:flex;flex-direction:column;gap:2px;font:800 14px Figtree,sans-serif;box-shadow:0 2px 0 rgba(255,255,255,.4) inset,0 5px 0 rgba(0,0,0,.25),0 12px 18px -10px rgba(0,0,0,.35);cursor:pointer;position:relative;overflow:hidden}
+.dl i{width:36px;height:36px;border-radius:12px;background:rgba(255,255,255,.25);display:grid;place-items:center;font:900 15px Unbounded,sans-serif;font-style:normal;margin-bottom:auto;box-shadow:0 2px 0 rgba(0,0,0,.15)}
+.dl b{font:900 14px Unbounded,sans-serif}.dl span{font-size:12px;opacity:.92;font-weight:600}
+.dl.done{filter:saturate(.6)}.dl.done i{background:#fff;color:#00a05a}
+.dl:active{transform:translateY(4px);box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.dchal{width:100%;border:0;border-radius:24px;padding:16px;margin-bottom:14px;text-align:left;color:#fff;background:linear-gradient(135deg,#14102b,#3b2f7a 60%,#7c3aed);box-shadow:0 6px 0 #07051a,var(--lift);cursor:pointer;font-family:inherit}
+.dchal b{display:block;font:900 18px Unbounded,sans-serif}.dchal span{font-size:13px;opacity:.85;font-weight:600}
+.nwhead{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin:4px 0 10px}.nwhead b{font:900 18px Unbounded,sans-serif}.nwhead span{font-size:12px;color:var(--mute);font-weight:700}
+.nw{display:flex;gap:12px;align-items:flex-start;background:var(--card);border-radius:20px;padding:14px;margin-bottom:10px;box-shadow:0 5px 0 var(--edge0),var(--lift)}
+.nw b{display:block;font:900 19px Unbounded,sans-serif;background:linear-gradient(135deg,#e11df0,#ff1f7a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nw span{display:block;font-weight:700;font-size:15px;margin-top:2px}.nw em{display:block;color:var(--mute);font-size:14px;margin-top:4px}
+.spk{flex:none;width:44px;height:44px;border:0;border-radius:14px;background:linear-gradient(135deg,#e11df0,#ff70d0);color:#fff;font-size:18px;box-shadow:0 4px 0 #9c10a8;cursor:pointer}
+.spk:active{transform:translateY(3px);box-shadow:0 1px 0 #9c10a8}
+.idc{background:var(--g);color:#fff;border-radius:20px;padding:14px;margin-bottom:10px;box-shadow:0 5px 0 rgba(0,0,0,.25)}
+.idc small{display:block;font-size:12px;font-weight:800;opacity:.85}.idc b{display:block;font:900 19px Unbounded,sans-serif;margin:2px 0 4px}.idc span{display:block;font-size:15px;font-weight:600}.idc em{display:block;font-size:13px;opacity:.85;margin-top:4px}
+.hidef{background:rgba(255,255,255,.2);border-radius:12px;padding:10px;cursor:pointer;font-style:italic}
+.hidef.shown{font:700 17px/1.5 "Cambria Math",Georgia,serif;font-style:normal}
+.echeck{border-radius:26px;padding:18px;margin-top:18px;color:#fff;background:linear-gradient(135deg,#2563ff,#7c3aed 60%,#ff1f7a);box-shadow:0 2px 0 rgba(255,255,255,.35) inset,0 8px 0 #2531b8,0 24px 30px -16px rgba(60,40,200,.6)}
+.ehead{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.eband{width:88px;height:88px;flex:none;border-radius:26px;background:rgba(255,255,255,.2);display:grid;place-content:center;text-align:center;box-shadow:0 5px 0 rgba(0,0,0,.2)}
+.eband b{font:900 32px Unbounded,sans-serif;line-height:1}.eband span{font-size:10px;font-weight:800;opacity:.9}
+.ehead>div:last-child b{display:block;font:900 17px Unbounded,sans-serif}.ehead>div:last-child span{font-size:13px;opacity:.9}
+.cbar{display:grid;grid-template-columns:minmax(0,1fr) 34% 2.4em;gap:8px;align-items:center;font-size:13px;font-weight:700;margin:6px 0}
+.cbar div{height:12px;border-radius:99px;background:rgba(255,255,255,.22);overflow:hidden}.cbar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#ffd60a,#fff)}
+.cbar b{font-family:Unbounded,sans-serif;text-align:right}
+ul.ok{list-style:none;padding:0;margin:0}ul.ok li{padding:10px 12px 10px 38px;margin-bottom:8px;border-radius:14px;background:color-mix(in srgb,#00c46a 14%,var(--card));position:relative;font-weight:600;font-size:15px}
+ul.ok li::before{content:"✓";position:absolute;left:12px;top:9px;width:18px;height:18px;border-radius:6px;background:#00c46a;color:#fff;font-size:12px;display:grid;place-items:center;font-weight:900}
+.igrp{background:var(--card);border-radius:18px;padding:12px 14px;margin-bottom:10px;box-shadow:0 4px 0 var(--edge0),var(--lift)}
+.igrp>b{font:900 13px Unbounded,sans-serif;color:#ff4d2e}.igrp ul{margin:6px 0 0;padding-left:18px}.igrp li{margin:6px 0;font-size:15px;font-weight:500}
+.hlkey{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}.hlkey span{font-size:12px;font-weight:800;padding:3px 8px;border-radius:8px}
+.hltext{background:var(--card);border-radius:18px;padding:14px;font-size:16px;line-height:1.75;box-shadow:0 4px 0 var(--edge0),var(--lift)}
+.hl-link{background:#c9f7dd;color:#00602f;border-radius:5px;padding:0 2px}.hl-acad{background:#d9e6ff;color:#1238b8;border-radius:5px;padding:0 2px}.hl-rep{background:#fff1b8;color:#7a5600;border-radius:5px;padding:0 2px}.hl-inf{background:#ffd9d1;color:#a8250d;border-radius:5px;padding:0 2px}.hl-miss{background:#ffd9d1;color:#a8250d;text-decoration:wavy underline #ff4d2e;border-radius:5px;padding:0 2px}
+.aip{height:180px;margin-top:10px;font-size:13px}
+
 </style>
 </head>
 <body>
@@ -520,6 +562,7 @@ input[type=range]{accent-color:#ff1f7a}
   <div class="row2"><button class="ghost urge" id="urge">I want to scroll</button><button class="ghost" id="undo">Undo last</button></div>
   <div class="row2" style="margin-top:8px"><button class="ghost" data-go="goals">Edit my goals</button><button class="ghost" id="addToday">+ Task for today</button></div>
   <button class="ghost busy" id="busy" style="width:100%;margin-top:8px"></button>
+  <div class="daily" id="daily"></div>
   <h2 class="sec">Today's list</h2>
   <p class="sub">Tap a task to jump to it.</p>
   <ul class="tl" id="list"></ul>
@@ -617,6 +660,8 @@ input[type=range]{accent-color:#ff1f7a}
   <button class="back" data-go="tools">← Tools</button>
   <header><h1 class="mega">Decks</h1><span class="date" id="wDue"></span></header>
   <p class="sub">Spaced repetition. Cards you know come back less often; cards you miss come back tomorrow.</p>
+  <div id="newWords"></div>
+  <h2 class="sec">Review</h2>
   <div class="deckbar" id="deckBar"></div>
   <form id="newDeck" class="f" hidden style="margin-bottom:12px"><input id="ndName" class="full" placeholder="Deck name, e.g. Calc theorems" aria-label="Deck name"><button class="btn full">Create deck</button></form>
   <div id="fcWrap"></div>
@@ -685,14 +730,16 @@ input[type=range]{accent-color:#ff1f7a}
 
 <section class="view" id="v-write">
   <button class="back" data-go="tools">← Tools</button>
-  <header><h1>Writing studio</h1><span class="date" id="wrTime">--:--</span></header>
-  <p class="sub">Timed essays with a live word count. Practise typing too, since IELTS is moving to computers.</p>
+  <header><h1 class="mega" style="font-size:clamp(30px,9vw,44px)">Writing</h1><span class="date" id="wrTime">--:--</span></header>
+  <p class="sub">Write, then tap <b>Check my essay</b>: estimated bands, mistakes, repeated words, linking, and a highlighted copy. One more tap gets full AI examiner feedback.</p>
   <div class="seg" id="wrModes"></div>
   <div class="prompt" id="wrPrompt"></div>
   <div class="row2" style="margin:8px 0"><button class="ghost" id="wrNew">New prompt</button><button class="ghost" id="wrGo">Start timer</button></div>
   <textarea id="wrText" class="essay" placeholder="Start writing…" aria-label="Essay"></textarea>
   <div class="wc"><span id="wrCount">0 words</span><span id="wrTarget"></span></div>
-  <div class="row2" style="margin-top:8px"><button class="ghost" id="wrCopy">Copy text</button><button class="btn" style="flex:1" id="wrDone">Finish &amp; mark</button></div>
+  <button class="btn big" style="width:100%;margin-top:10px" id="wrCheckB">Check my essay</button>
+  <div class="row2" style="margin-top:8px"><button class="ghost" id="wrCopy">Copy text</button><button class="ghost" style="flex:1" id="wrDone">Finish &amp; save score</button></div>
+  <div id="wrCheck"></div>
   <div id="wrMark"></div>
   <h2 class="sec">History</h2>
   <ul class="log" id="wrHist"></ul>
@@ -735,6 +782,7 @@ input[type=range]{accent-color:#ff1f7a}
   <h2 class="sec">Comfort</h2>
   <label class="tog"><span>Sound when a timer ends</span><input type="checkbox" id="stSound"></label>
   <label class="tog"><span>Keep screen on while a timer runs</span><input type="checkbox" id="stWake"></label>
+  <label class="tog"><span>New words per day</span><select id="stWper" style="width:auto;height:40px"><option>3</option><option>5</option><option>10</option></select></label>
   <label class="tog"><span>Theme</span><select id="stTheme" style="width:auto;height:40px"><option value="">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
   <label class="tog"><span>Card tilts with your phone (3D)</span><input type="checkbox" id="stTilt"></label>
   <button class="btn" style="width:100%;margin-top:14px" id="stInstall" hidden>Install as an app</button>
@@ -801,6 +849,12 @@ input[type=range]{accent-color:#ff1f7a}
   <div class="obg" id="obG"></div>
   <button id="obGo">Let's go</button>
   <button class="sec" id="obSkip">Skip, I'll set it up myself</button>
+</section></div>
+<div class="sheet" id="ideaSheet"><section>
+  <h3>Idea of the day</h3>
+  <div id="ideaBody"></div>
+  <button id="ideaDone">I explained it out loud</button>
+  <button class="sec" id="ideaClose">Later</button>
 </section></div>
 <div class="zen" id="zen" hidden><div class="zt"><span id="zSub"></span><b id="zTime">00:00</b><span id="zMode"></span></div><div class="zb"><button id="zGo">Pause</button><button id="zX">Exit</button></div></div>
 <div class="toast" id="toast"></div>
@@ -961,7 +1015,7 @@ function renderToday(anim){
  const busy=S.get('plan:busy:'+key,false);$('busy').classList.toggle('on',busy);$('busy').textContent=busy?'Busy day: every goal is halved. Tap to restore':'Busy day? Halve every goal today';
  const w=$('cardWrap');w.style.setProperty('--e1','');
  if(!goals.length&&!tasks.length){
-  w.innerHTML=`<div class="card hero in" style="background:${grad('calc')};--edge:${SUBJ.calc.e}"><span class="tag">Start here</span><h2>Set your own goals</h2><p>Pick what you study and for how long: 30 minutes SAT, 50 minutes Calculus… Tap one to add it, change it later.</p><div class="tplin">${TPL.slice(0,6).map((t,i)=>`<button data-t="${i}" style="background:${grad(t[1])};--edge:${SUBJ[t[1]].e}">${SUBJ[t[1]].i} ${t[0]} · ${t[2]}m</button>`).join('')}</div><button class="go wide" data-go="goals">Open the goal editor</button></div>`;
+  w.innerHTML=`<div class="card start in" style="background:${grad('calc')};--edge:${SUBJ.calc.e}"><span class="tag">Start here</span><h2>Set your own goals</h2><p>Pick what you study and for how long: 30 minutes SAT, 50 minutes Calculus… Tap one to add it, change it later.</p><div class="tplin">${TPL.slice(0,6).map((t,i)=>`<button data-t="${i}" style="background:${grad(t[1])};--edge:${SUBJ[t[1]].e}">${SUBJ[t[1]].i} ${t[0]} · ${t[2]}m</button>`).join('')}</div><button class="go wide" data-go="goals">Open the goal editor</button></div>`;
   w.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>{addTpl(+b.dataset.t);});
  }else if(!tasks.length){
   w.innerHTML=`<div class="card in" style="background:${grad('other')};--edge:${SUBJ.other.e}"><span class="tag">Free day</span><h2>No goals for ${DAYS[dowOf(key)]}</h2><p>Rest, or add a task just for today.</p><button class="go wide" id="emptyAdd">+ Task for today</button></div>`;
@@ -1080,7 +1134,11 @@ const BADGES=[
  ['p50','Problem solver','50 correct practice answers',()=>S.get('plan:pxp',0)>=100,'✎'],
  ['p500','Math machine','500 correct practice answers',()=>S.get('plan:pxp',0)>=1000,'∞'],
  ['perfect','Perfect 10','10/10 in a practice session',()=>S.get('plan:psess',[]).some(x=>x.n>=10&&x.c===x.n),'10'],
- ['deck','Collector','Make your own deck',()=>DECKS.length>3,'▦']];
+ ['deck','Collector','Make your own deck',()=>DECKS.length>3,'▦'],
+ ['w50','Word hunter','Learn 50 new words',()=>S.get('plan:wIdx',0)>=50,'Aa'],
+ ['w150','Lexicon','Learn all the built-in words',()=>S.get('plan:wIdx',0)>=WORDS.length,'Ω'],
+ ['l7','Daily learner','7-day learning streak',()=>lstreak()>=7,'L7'],
+ ['chk5','Self-critic','Check 5 essays',()=>S.get('plan:checks',0)>=5,'✓✓']];
 const xpMin=()=>S.get('plan:focus',[]).reduce((a,x)=>a+x.m,0);
 const subMin=s=>S.get('plan:focus',[]).filter(x=>subOf(x.s)===s).reduce((a,x)=>a+x.m,0);
 function checkBadges(){const got=S.get('plan:badges',[]);BADGES.forEach(([id,n,,c])=>{if(!got.includes(id)&&c()){got.push(id);S.set('plan:badges',got);setTimeout(()=>{toast(`Badge unlocked: ${n}!`);confetti(120,true)},700)}})}
@@ -1165,7 +1223,7 @@ if(!deck){deck=starter.map(([w,m,e])=>({w,m,e,b:0,due:key}));S.set('plan:words',
 let flip=false;
 function due(){return deck.map((c,i)=>[c,i]).filter(([c])=>c.due<=key)}
 function renderWords(){
- renderDecks();const d=due();$('wDue').textContent=`${allDue()} due`;
+ renderDecks();renderNewWords();const d=due();$('wDue').textContent=`${allDue()} due`;
  if(!d.length)$('fcWrap').innerHTML=`<div class="fc"><div class="w">All clear</div><div class="m">No cards due in this deck. Come back tomorrow, or add new cards below.</div></div>`;
  else{const[c,i]=d[0];$('fcWrap').innerHTML=`<div class="fc" id="fc" role="button" tabindex="0"><div class="w">${esc(c.w)}</div>${flip?`<div class="m">${esc(c.m)}</div>${c.e?`<div class="e">${esc(c.e)}</div>`:''}`:`<div class="hint">Say the meaning out loud, then tap to check</div>`}</div>${flip?`<div class="rate"><button class="no" id="rNo">Forgot</button><button class="yes" id="rYes">Knew it</button></div>`:''}`;
   $('fc').onclick=()=>{$('fc').classList.add('out');setTimeout(()=>{flip=!flip;renderWords();$('fc')&&$('fc').classList.add('in')},150)};
@@ -1276,7 +1334,7 @@ $('eF').onsubmit=e=>{e.preventDefault();errs.push({id:Date.now().toString(36),d:
 /* ---------- writing studio ---------- */
 const modes={t2:['Task 2',40,250],t1:['Task 1',20,150],ph:['Philosophy',240,0],free:['Free',30,0]};
 const prompts={
- t2:['Some people think schools should teach practical skills such as managing money, while others think academic subjects matter more. Discuss both views and give your opinion.','Social media does more harm than good to young people. To what extent do you agree or disagree?','In many countries, people spend more time on screens than ever before. What problems does this cause, and what can be done?','Governments should spend money on space exploration rather than on solving problems on Earth. To what extent do you agree?','Some believe university should be free for everyone. What are the advantages and disadvantages of this?','Many students now study online instead of in classrooms. Is this a positive or negative development?','Economic growth is the best measure of a country\'s success. To what extent do you agree?','Why do some people find it hard to concentrate today, and how can this be solved?'],
+ t2:['Some people think schools should teach practical skills such as managing money, while others think academic subjects matter more. Discuss both views and give your opinion.','Social media does more harm than good to young people. To what extent do you agree or disagree?','In many countries, people spend more time on screens than ever before. What problems does this cause, and what can be done?','Governments should spend money on space exploration rather than on solving problems on Earth. To what extent do you agree?','Some believe university should be free for everyone. What are the advantages and disadvantages of this?','Many students now study online instead of in classrooms. Is this a positive or negative development?','Economic growth is the best measure of a country\'s success. To what extent do you agree?','Why do some people find it hard to concentrate today, and how can this be solved?','Some people think that artificial intelligence will create more jobs than it destroys. To what extent do you agree or disagree?','Many young people today want to work for themselves rather than for a company. Why is this, and is it a positive development?','Some argue that the best way to reduce crime is longer prison sentences. Others believe there are better ways. Discuss both views and give your opinion.','Children today are given too much homework. To what extent do you agree?','In some countries, the number of people living alone is increasing. What are the causes, and is this a positive or negative trend?','Some believe that international tourism brings more problems than benefits. Discuss both views and give your opinion.','Rich countries should give more financial help to poorer countries. To what extent do you agree?','Some people believe that studying history is a waste of time. To what extent do you agree?','More and more people are buying goods online instead of in shops. Do the advantages outweigh the disadvantages?','Governments should make public transport free. To what extent do you agree?','Some think competition at school is good for children, while others think cooperation is better. Discuss both views and give your opinion.','Famous people today have more influence on young people than ever before. Is this a positive or negative development?'],
  t1:['Open Cambridge IELTS (any test), find Writing Task 1, and copy the question here. Describe the main features and make comparisons. At least 150 words.','Describe a process you know well (e.g. how coffee is made) in the style of an IELTS process diagram answer. At least 150 words.'],
  ph:['"Freedom is not the absence of rules, but the ability to give them to oneself." Discuss.','Can we know anything with certainty?','Is it ever right to break a promise?','"Technology does not change what we value, only what we can do." Do you agree?','Should we judge actions by their consequences or by the intentions behind them?','Is a just society one where everyone is equal, or one where everyone is free?'],
  free:['Write about anything: what you learned today, an idea from your reading, or an argument you want to test.']};
@@ -1297,15 +1355,16 @@ $('wrGo').onclick=()=>{wr.endAt=wr.endAt?null:Date.now()+modes[wr.mode][1]*6e4;s
 $('wrText').oninput=()=>{wr.text=$('wrText').value;saveW();wCount()};
 $('wrCopy').onclick=async()=>{try{await navigator.clipboard.writeText(($('wrPrompt').textContent+'\n\n'+wr.text).trim());toast('Copied. Paste it to Claude for feedback.')}catch(e){toast('Copy blocked. Select the text and copy it.')}};
 const crits={t2:['Task Response','Coherence & Cohesion','Lexical Resource','Grammatical Range & Accuracy'],t1:['Task Achievement','Coherence & Cohesion','Lexical Resource','Grammatical Range & Accuracy'],ph:['Relevance to the topic','Philosophical understanding','Persuasive argument','Coherence','Originality']};
+$('wrCheckB').onclick=()=>renderCheck();
 $('wrDone').onclick=()=>{
  const n=wcount(wr.text);if(!n){toast('Write something first');return}
  wr.endAt=null;saveW();const c=crits[wr.mode];
  if(!c){saveEssay('-');return}
- const ie=wr.mode!=='ph',opts=ie?[4,5,6,7,8,9]:[1,2,3,4,5];
- $('wrMark').innerHTML=`<h2 class="sec">Mark it honestly</h2><p class="sub">${ie?'Use the official band descriptors (Library → IELTS).':'Score each criterion 1–5.'}</p>${c.map((x,i)=>`<div class="crit"><span>${x}</span><select id="cr${i}">${opts.map(o=>`<option ${o===(ie?7:3)?'selected':''}>${o}</option>`).join('')}</select></div>`).join('')}<button class="btn" style="width:100%;margin-top:8px" id="wrSave">Save score</button>`;
+ const ie=wr.mode!=='ph',opts=ie?[4,5,6,7,8,9]:[1,2,3,4,5];let est=null;try{est=analyzeEssay(wr.text,wr.mode,$('wrPrompt').textContent)}catch(e){}
+ $('wrMark').innerHTML=`<h2 class="sec">Mark it honestly</h2><p class="sub">${ie?'Pre-filled with the automatic estimate. Adjust it honestly using the official band descriptors.':'Score each criterion 1–5.'}</p>${c.map((x,i)=>`<div class="crit"><span>${x}</span><select id="cr${i}">${opts.map(o=>`<option ${o===(ie?(est&&est.sc?Math.round(est.sc[i]):7):(est&&est.phScore?Math.round(est.phScore):3))?'selected':''}>${o}</option>`).join('')}</select></div>`).join('')}<button class="btn" style="width:100%;margin-top:8px" id="wrSave">Save score</button>`;
  $('wrSave').onclick=()=>{const v=c.map((_,i)=>+$('cr'+i).value),avg=v.reduce((a,b)=>a+b,0)/v.length;const sc=ie?(Math.round(avg*2)/2).toFixed(1):avg.toFixed(1)+'/5';saveEssay(sc,ie);if(ie){const s=S.get('plan:scores',[]);s.push({d:key,t:'IELTS Writing (self)',v:sc});S.set('plan:scores',s);renderStats()}};
 };
-function saveEssay(sc){const h=S.get('plan:essays',[]);h.push({d:key,m:modes[wr.mode][0],w:wcount(wr.text),s:sc});S.set('plan:essays',h);wr.text='';wr.p++;saveW();$('wrMark').innerHTML='';renderWrite();renderHist();toast('Saved. Rewrite the weakest paragraph tomorrow.')}
+function saveEssay(sc){markDL('write');$('wrCheck').innerHTML='';const h=S.get('plan:essays',[]);h.push({d:key,m:modes[wr.mode][0],w:wcount(wr.text),s:sc});S.set('plan:essays',h);wr.text='';wr.p++;saveW();$('wrMark').innerHTML='';renderWrite();renderHist();toast('Saved. Rewrite the weakest paragraph tomorrow.')}
 function renderHist(){const h=S.get('plan:essays',[]);$('wrHist').innerHTML=h.length?h.slice().reverse().slice(0,20).map(x=>`<li><span>${esc(x.d)} · ${esc(x.m)} · ${x.w} words</span><span>${esc(x.s)}</span></li>`).join(''):'<li><span class="note">No essays yet.</span><span></span></li>'}
 
 /* ---------- formulas ---------- */
@@ -1354,7 +1413,7 @@ $('bkRestore').onclick=()=>{try{const o=JSON.parse($('bkIn').value);let n=0;for(
 
 /* ---------- settings ---------- */
 function renderSettings(){
- $('stIelts').value=S.get('plan:ielts','');$('stTheme').value=S.get('plan:theme','');$('stTilt').checked=S.get('plan:tilt',true);storageInfo();$('stSound').checked=S.get('plan:sound',true);$('stWake').checked=S.get('plan:wake',true);
+ $('stIelts').value=S.get('plan:ielts','');$('stWper').value=S.get('plan:wPer',5);$('stTheme').value=S.get('plan:theme','');$('stTilt').checked=S.get('plan:tilt',true);storageInfo();$('stSound').checked=S.get('plan:sound',true);$('stWake').checked=S.get('plan:wake',true);
  const ev=S.get('plan:events',[]);$('evL').innerHTML=ev.length?ev.map((e,i)=>`<li><span>${esc(e.n)}</span><span>${esc(e.d)} <button class="x" data-i="${i}" aria-label="Delete">×</button></span></li>`).join(''):'<li><span class="note">Add your national olympiad rounds when you know them.</span><span></span></li>';
 }
 $('stIelts').onchange=()=>{S.set('plan:ielts',$('stIelts').value);chips();refresh();toast('IELTS date saved')};
@@ -1393,6 +1452,7 @@ function restore(o){let n=0;for(const k in o)if(k.startsWith('plan:')){localStor
 $('bkFile').onclick=()=>{try{const b=new Blob([JSON.stringify(dump(),null,1)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=`study-plan-backup-${key}.json`;document.body.appendChild(a);a.click();a.remove();S.set('plan:lastBackup',key);$('bkNote').textContent='Saved to your Downloads. Keep it somewhere safe (Google Drive, Telegram Saved Messages).';renderBk();banner()}catch(e){$('bkNote').textContent='Download blocked here. Use "Copy backup as text".'}};
 $('bkUp').onchange=async()=>{const f=$('bkUp').files[0];if(!f)return;try{const n=restore(JSON.parse(await f.text()));$('bkNote').textContent=`Restored ${n} items. Reloading…`;setTimeout(()=>location.reload(),800)}catch(e){$('bkNote').textContent='That file is not a backup from this app.'}};
 function renderBk(){const l=S.get('plan:lastBackup',null);$('bkLast').textContent=l?`Last backup: ${l}`:'No backup yet.'}
+$('stWper').onchange=()=>{S.set('plan:wPer',+$('stWper').value);toast('From tomorrow: '+$('stWper').value+' new words a day')};
 $('stTheme').onchange=()=>{S.set('plan:theme',$('stTheme').value);applyTheme()};
 $('stTilt').onchange=()=>{tiltOn=$('stTilt').checked;S.set('plan:tilt',tiltOn);if(!tiltOn)setTilt(0,0);
  if(tiltOn&&typeof DeviceOrientationEvent!=='undefined'&&DeviceOrientationEvent.requestPermission)DeviceOrientationEvent.requestPermission().catch(()=>{})};
@@ -1476,7 +1536,7 @@ function startPractice(sub,mode,topic){
  PS={sub,mode,pool,n:0,c:0,streak:0,best:0,t0:Date.now(),end:mode==='sprint'?Date.now()+120e3:null,total:mode==='ten'||mode==='weak'?10:null,q:null,checked:false};
  nextQ();
 }
-function nextQ(){const g=pick(PS.pool);const q=g[2]();PS.q=Object.assign(q,{id:g[0],tn:g[1]});PS.checked=false;renderPractice()}
+function nextQ(){if(PS.list){PS.q=PS.list[Math.min(PS.n,PS.list.length-1)];PS.sub=PS.q.sub;PS.checked=false;renderPractice();return}const g=pick(PS.pool);const q=g[2]();PS.q=Object.assign(q,{id:g[0],tn:g[1]});PS.checked=false;renderPractice()}
 function checkQ(){if(!PS||PS.checked)return;const v=parseAns($('pIn').value);if(isNaN(v)){toast('Type a number, e.g. 2.5, -3/4, 2pi');return}
  const q=PS.q,tol=q.tol||Math.max(.01,Math.abs(q.a)*.005),ok=Math.abs(v-q.a)<=tol;
  PS.checked=true;PS.n++;if(ok){PS.c++;PS.streak++;PS.best=Math.max(PS.best,PS.streak);tap();confetti(20)}else{PS.streak=0;try{navigator.vibrate&&navigator.vibrate([60,40,60])}catch(e){}}
@@ -1485,26 +1545,28 @@ function checkQ(){if(!PS||PS.checked)return;const v=parseAns($('pIn').value);if(
  PS.last={ok,v};renderPractice()}
 function finishPractice(){if(!PS)return;const mins=Math.max(1,Math.round((Date.now()-PS.t0)/6e4));logMin(PSUB[PS.sub][0]==='SAT Math'?'SAT':PSUB[PS.sub][0],mins);
  const hist=S.get('plan:psess',[]);hist.push({d:key,s:PS.sub,m:PS.mode,c:PS.c,n:PS.n,min:mins});S.set('plan:psess',hist);
- PS.done=true;PS.mins=mins;renderPractice();checkBadges();if(PS.n&&PS.c/PS.n>=.8)confetti(100,true)}
+ PS.done=true;PS.mins=mins;if(PS.mode==='daily'){markDL('challenge');S.set('plan:dres:'+key,PS.c+'/'+PS.n)}renderPractice();checkBadges();if(PS.n&&PS.c/PS.n>=.8)confetti(100,true)}
 function renderPractice(){
  const w=$('pArea');
  if(!PS){
   const ts=topicStats();
-  w.innerHTML=`<div class="pick">${Object.entries(PSUB).map(([k,[n,s]])=>`<button class="pbig" data-s="${k}" style="background:${grad(s)};--edge:${SUBJ[s].e}"><i>${SUBJ[s].i}</i><b>${n}</b><span>${GEN[k].length} topics</span></button>`).join('')}</div>
+  const dr=S.get('plan:dres:'+key,null);
+  w.innerHTML=`<button class="dchal" id="pDaily"><b>Daily challenge</b><span>${dr?`Done today: ${dr} · tap to retry`:'3 problems, same for today · keeps your learning streak'}</span></button><div class="pick">${Object.entries(PSUB).map(([k,[n,s]])=>`<button class="pbig" data-s="${k}" style="background:${grad(s)};--edge:${SUBJ[s].e}"><i>${SUBJ[s].i}</i><b>${n}</b><span>${GEN[k].length} topics</span></button>`).join('')}</div>
   <div class="seg" id="pMode" style="margin-top:14px">${[['ten','10 questions'],['sprint','2-min sprint'],['weak','Weakest topics'],['free','Endless']].map(([m,l])=>`<button data-m="${m}" class="${m===(S.get('plan:pmode','ten'))?'on':''}">${l}</button>`).join('')}</div>
   <h2 class="sec">Topics</h2><p class="sub">Tap a topic to drill just that. Bars show your accuracy.</p>
   ${Object.entries(GEN).map(([k,gs])=>`<details><summary><span>${PSUB[k][0]}<small>${gs.reduce((a,g)=>a+((ts[g[0]]||{}).n||0),0)} answered</small></span></summary><div class="dbody">${gs.map(g=>{const t=ts[g[0]]||{c:0,n:0},p=t.n?Math.round(t.c/t.n*100):null;return`<button class="trow" data-s="${k}" data-t="${g[0]}"><span>${g[1]}</span><span class="acc"><i style="width:${p??0}%;background:${p==null?'transparent':p>=80?'#00c46a':p>=50?'#ffb300':'#ff4d2e'}"></i></span><em>${p==null?'new':p+'%'}</em></button>`}).join('')}</div></details>`).join('')}
   <h2 class="sec">Recent sessions</h2><ul class="log">${S.get('plan:psess',[]).slice(-6).reverse().map(x=>`<li><span>${esc(x.d)} · ${PSUB[x.s][0]} · ${x.min} min</span><span>${x.c}/${x.n}</span></li>`).join('')||'<li><span class="note">No sessions yet.</span><span></span></li>'}</ul>`;
+  $('pDaily').onclick=startDaily;
   w.querySelectorAll('.pbig').forEach(b=>b.onclick=()=>startPractice(b.dataset.s,S.get('plan:pmode','ten')));
   $('pMode').onclick=e=>{const b=e.target.closest('button');if(!b)return;S.set('plan:pmode',b.dataset.m);renderPractice()};
   w.querySelectorAll('.trow').forEach(b=>b.onclick=()=>startPractice(b.dataset.s,'free',b.dataset.t));
   return}
  const s=PSUB[PS.sub][1];
  if(PS.done){const p=PS.n?Math.round(PS.c/PS.n*100):0;
-  w.innerHTML=`<div class="card in" style="background:${grad(s)};--edge:${SUBJ[s].e}"><span class="tag">Session done</span><h2>${PS.c} / ${PS.n} correct</h2><p>${p}% · best streak ${PS.best} · ${PS.mins} min logged · +${PS.c*2} XP</p><div class="how">${p>=90?'Excellent. Try a harder topic or a sprint.':p>=70?'Solid. Redo the misses tomorrow.':'Look at the solutions, then drill your weakest topic.'}</div><div class="acts"><button class="skip" id="pBack">Menu</button><button class="go" id="pAgain">Go again</button></div></div>`;
-  $('pBack').onclick=()=>{PS=null;renderPractice()};$('pAgain').onclick=()=>startPractice(PS.sub,PS.mode,PS.pool.length===1?PS.pool[0][0]:null);return}
+  w.innerHTML=`<div class="card in" style="background:${grad(s)};--edge:${SUBJ[s].e}"><span class="tag">${PS.mode==='daily'?'Daily challenge done':'Session done'}</span><h2>${PS.c} / ${PS.n} correct</h2><p>${p}% · best streak ${PS.best} · ${PS.mins} min logged · +${PS.c*2} XP</p><div class="how">${p>=90?'Excellent. Try a harder topic or a sprint.':p>=70?'Solid. Redo the misses tomorrow.':'Look at the solutions, then drill your weakest topic.'}</div><div class="acts"><button class="skip" id="pBack">Menu</button><button class="go" id="pAgain">Go again</button></div></div>`;
+  $('pBack').onclick=()=>{PS=null;renderPractice()};$('pAgain').onclick=()=>PS.mode==='daily'?startPractice(PS.sub,'ten'):startPractice(PS.sub,PS.mode,PS.pool.length===1?PS.pool[0][0]:null);return}
  const q=PS.q,left=PS.end?Math.max(0,Math.round((PS.end-Date.now())/1e3)):null;
- w.innerHTML=`<div class="pbar"><span>${PSUB[PS.sub][0]} · ${esc(q.tn)}</span><span>${PS.c}/${PS.n}${PS.total?` · Q${Math.min(PS.n+(PS.checked?0:1),PS.total)}/${PS.total}`:''}${left!=null?` · <b id="pClock">${fmt(left)}</b>`:''}${PS.streak>1?` · 🔥${PS.streak}`:''}</span></div>
+ w.innerHTML=`<div class="pbar"><span>${PS.mode==='daily'?'Daily challenge · ':''}${PSUB[PS.sub][0]} · ${esc(q.tn)}</span><span>${PS.c}/${PS.n}${PS.total?` · Q${Math.min(PS.n+(PS.checked?0:1),PS.total)}/${PS.total}`:''}${left!=null?` · <b id="pClock">${fmt(left)}</b>`:''}${PS.streak>1?` · 🔥${PS.streak}`:''}</span></div>
  <div class="card qcard${PS.checked?(PS.last.ok?' ok':' bad'):' in'}" style="background:${grad(s)};--edge:${SUBJ[s].e}"><div class="qtext">${q.q}</div>
  <div class="ans"><input id="pIn" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Your answer" ${PS.checked?'disabled':''} value="${PS.checked?esc($('pIn')?.value||''):''}"><button class="go" id="pChk">${PS.checked?'Next →':'Check'}</button></div>
  ${PS.checked?'':`<div class="keys">${['−','/','.','π','√(','^','e','(',')'].map(k=>`<button data-k="${k}">${k}</button>`).join('')}</div>`}
@@ -1563,13 +1625,143 @@ function onboard(){if(S.get('plan:onb',false)||goals.length)return;let sel=new S
  $('obSkip').onclick=()=>{S.set('plan:onb',true);$('onb').classList.remove('open')}}
 function greet(){const hr=new Date().getHours(),nm=S.get('plan:name','');$('hi').textContent=(hr<5?'Late night':hr<12?'Good morning':hr<18?'Good afternoon':'Good evening')+(nm?`, ${nm}`:'')+(streak()?` · ${streak()}-day streak`:'')}
 
+/* ---------- daily words ---------- */
+const WORDS=[['abundant','existing in large quantities','Natural resources are not as abundant as they once were.'],['accelerate','to make something happen faster','Technology has accelerated the pace of change.'],['accountable','responsible for your actions and expected to explain them','Leaders must be held accountable for their decisions.'],['acknowledge','to accept or admit that something is true','Critics acknowledge that the policy has some benefits.'],['adverse','harmful or unfavourable','Too much screen time can have adverse effects on sleep.'],['advocate','to publicly support an idea','Many experts advocate free university education.'],['allocate','to give out resources for a particular purpose','Governments should allocate more funds to healthcare.'],['alleviate','to make a problem less severe','Better public transport can alleviate traffic congestion.'],['ambiguous','having more than one possible meaning','The question was ambiguous, so the answers varied.'],['anticipate','to expect something and prepare for it','Few people anticipated how fast AI would develop.'],['arbitrary','based on chance or personal choice, not reason','The age limit seems arbitrary.'],['articulate','able to express ideas clearly','She gave an articulate defence of her view.'],['aspire','to strongly want to achieve something','Many students aspire to study abroad.'],['attain','to achieve something, usually after effort','Few candidates attain a band 9.'],['autonomy','the freedom to make your own decisions','Teenagers want more autonomy over their time.'],['bias','an unfair preference for or against something','News coverage often reflects political bias.'],['bolster','to support or strengthen','Investment in education can bolster economic growth.'],['burden','a heavy responsibility or duty','Rising costs place a burden on families.'],['catalyst','something that causes an important change','The crisis was a catalyst for reform.'],['coherent','logical and well organised','A coherent essay links each idea to the next.'],['coincide','to happen at the same time','The exam coincides with the holidays.'],['compelling','very convincing','There is compelling evidence that exercise improves memory.'],['complacent','too satisfied, so not trying to improve','Success can make companies complacent.'],['comprehensive','including everything that is needed','The report offers a comprehensive analysis.'],['concede','to admit that something is true, often unwillingly','I concede that the plan is expensive.'],['consensus','general agreement among a group','There is a scientific consensus on climate change.'],['constrain','to limit or restrict','Budget cuts constrain what schools can offer.'],['contemplate','to think carefully about something','She contemplated studying philosophy.'],['contend','to argue that something is true','Some contend that exams measure memory, not skill.'],['controversial','causing strong public disagreement','Genetic engineering remains controversial.'],['conventional','traditional and widely accepted','Online learning challenges conventional schooling.'],['crucial','extremely important','Sleep is crucial for learning.'],['curtail','to reduce or limit something','The new law aims to curtail plastic waste.'],['debilitating','making someone very weak','Chronic stress can be debilitating.'],['deficit','the amount by which something is too small','The country runs a large budget deficit.'],['deliberate','done on purpose','Deliberate practice is the key to expertise.'],['depict','to show or describe','The graph depicts changes in population.'],['deteriorate','to become worse','Air quality has deteriorated in big cities.'],['deterrent','something that discourages people from acting','Heavy fines act as a deterrent.'],['diminish','to become or make smaller or weaker','The value of savings diminishes with inflation.'],['discrepancy','a difference between things that should match','There is a discrepancy between the two reports.'],['disparity','a large and unfair difference','Income disparity has grown in many countries.'],['disrupt','to interrupt normal activity','Notifications disrupt concentration.'],['diverse','very different from each other','Big cities have diverse populations.'],['dominant','most powerful or important','English is the dominant language of science.'],['drastic','extreme and sudden','Drastic action is needed to cut emissions.'],['eliminate','to remove completely','The goal is to eliminate extreme poverty.'],['eloquent','fluent and persuasive in speech or writing','He made an eloquent case for reform.'],['emerge','to appear or become known','New problems emerged after the change.'],['empirical','based on observation or experiment','The claim lacks empirical support.'],['endorse','to publicly approve or support','Several scientists endorsed the proposal.'],['enhance','to improve the quality or value of','Reading widely enhances vocabulary.'],['entail','to involve something as a necessary part','The job entails a lot of travel.'],['equitable','fair and reasonable for everyone','An equitable tax system protects the poor.'],['erode','to gradually weaken or destroy','Misinformation erodes trust in institutions.'],['escalate','to become more serious or intense','The conflict escalated quickly.'],['evaluate','to judge the value or quality of','Students should evaluate their sources carefully.'],['evident','clearly seen or understood','It is evident that the policy failed.'],['exceed','to be greater than','Demand exceeded supply.'],['explicit','stated clearly and directly','The rules are explicit about cheating.'],['exploit','to use unfairly for your own benefit','Some firms exploit cheap labour.'],['feasible','possible and practical','Is it feasible to ban cars from city centres?'],['flawed','having a weakness or error','The argument is flawed.'],['fluctuate','to rise and fall often','Prices fluctuate throughout the year.'],['foster','to encourage the development of','Team sports foster cooperation.'],['fundamental','basic and very important','Education is a fundamental right.'],['hinder','to make progress difficult','Lack of sleep hinders learning.'],['hypothesis','an idea that can be tested','The data supported the hypothesis.'],['imminent','about to happen very soon','The storm is imminent.'],['impartial','not favouring one side','Judges must remain impartial.'],['imperative','extremely important and urgent','It is imperative that we act now.'],['implement','to put a plan into action','The school implemented a phone ban.'],['implication','a possible effect or result','The findings have serious implications.'],['incentive','something that encourages a person to act','Tax breaks are an incentive to invest.'],['inclined','likely or wanting to do something','People are inclined to trust experts.'],['incompatible','unable to exist or work together','Their goals were incompatible.'],['indispensable','absolutely necessary','Smartphones have become indispensable.'],['inevitable','certain to happen','Some change is inevitable.'],['inherent','existing as a natural part of something','Risk is inherent in investing.'],['inhibit','to prevent or slow down','Fear can inhibit creativity.'],['innovative','new and original','The company is known for innovative products.'],['integral','necessary to make something complete','Exercise is integral to good health.'],['intervene','to get involved in order to change a situation','The government intervened to stop the crisis.'],['intrinsic','belonging naturally; coming from within','Intrinsic motivation lasts longer than rewards.'],['inundate','to overwhelm with a large amount','We are inundated with information.'],['jeopardise','to put something at risk','Cheating can jeopardise your future.'],['justify','to give good reasons for','Can the cost be justified?'],['legitimate','reasonable and acceptable; legal','Parents have legitimate concerns.'],['lucrative','producing a lot of money','Jobs in technology are often lucrative.'],['mandatory','required by law or rules','School is mandatory until the age of 16.'],['marginal','small and not important','The change had only a marginal effect.'],['meticulous','very careful and precise','She keeps meticulous notes.'],['monotonous','boring because it never changes','Factory work can be monotonous.'],['negligible','so small that it is not important','The difference was negligible.'],['notion','an idea or belief','The notion that money buys happiness is debated.'],['obsolete','no longer used; out of date','Many jobs may soon become obsolete.'],['obstacle','something that blocks progress','Cost is the main obstacle to studying abroad.'],['overwhelming','very great in amount or effect','The evidence is overwhelming.'],['paramount','more important than anything else','Safety is paramount.'],['perceive','to notice or understand in a particular way','Young people perceive risk differently.'],['persistent','continuing for a long time','Persistent effort beats talent.'],['pertinent','relevant to the matter','She asked a pertinent question.'],['phenomenon','an observable fact or event','Social media addiction is a recent phenomenon.'],['plausible','seeming reasonable or likely','That explanation is plausible.'],['pragmatic','practical rather than idealistic','We need a pragmatic solution.'],['precede','to come before','Research should precede action.'],['predominantly','mainly','The audience was predominantly young.'],['prejudice','an unfair opinion formed without knowledge','Education can reduce prejudice.'],['prevalent','common at a particular time or place','Obesity is prevalent in rich countries.'],['profound','very great or intense','The internet had a profound impact on society.'],['prohibit','to officially forbid','Smoking is prohibited indoors.'],['prominent','important and well known','She is a prominent scientist.'],['proponent','a person who supports an idea','Proponents argue that it saves money.'],['prosperity','success and wealth','Trade brought prosperity to the region.'],['provoke','to cause a strong reaction','The decision provoked anger.'],['rationale','the reasons behind a decision','Explain the rationale for your answer.'],['reconcile','to make two different ideas fit together','It is hard to reconcile growth with sustainability.'],['redundant','no longer needed; repeating unnecessarily','Cut redundant words from your essay.'],['reinforce','to make stronger','Examples reinforce your argument.'],['reluctant','unwilling','Many people are reluctant to change their habits.'],['resilient','able to recover quickly from difficulties','Resilient students learn from failure.'],['restrict','to limit','Some countries restrict internet access.'],['rigorous','very thorough and strict','The course is academically rigorous.'],['scarce','not available in large amounts','Water is scarce in deserts.'],['sceptical','doubting that something is true','Be sceptical of sensational headlines.'],['significant','large or important enough to notice','There was a significant rise in sales.'],['simultaneously','at the same time','You cannot focus on two tasks simultaneously.'],['skew','to distort so that something is not accurate','Small samples can skew results.'],['stagnant','not growing or changing','Wages have been stagnant for years.'],['stringent','very strict','Stringent rules protect consumers.'],['subsequent','coming after something else','Subsequent studies confirmed the result.'],['substantial','large in size or value','The plan requires substantial investment.'],['subtle','not obvious, but important','There is a subtle difference between the two.'],['sufficient','enough','Is one hour of revision sufficient?'],['superficial','shallow; only on the surface','A superficial reading misses the point.'],['surpass','to be better or greater than','Exports surpassed expectations.'],['susceptible','easily influenced or harmed','Children are susceptible to advertising.'],['sustainable','able to continue without harming the future','We need sustainable sources of energy.'],['tangible','real and able to be seen or measured','The policy brought tangible benefits.'],['tedious','long and boring','Revision can be tedious, but it works.'],['tentative','not certain or fixed','They reached a tentative agreement.'],['thrive','to grow and succeed','Some students thrive under pressure.'],['trivial','unimportant','Do not waste time on trivial details.'],['undermine','to gradually weaken','Cheating undermines trust.'],['unprecedented','never having happened before','The pandemic caused unprecedented disruption.'],['viable','able to work successfully','Solar power is now a viable option.'],['vulnerable','easily hurt or harmed','The elderly are vulnerable to extreme heat.'],['widespread','existing in many places or among many people','Smartphone use is widespread among teenagers.'],['yield','to produce a result','The experiment yielded clear results.']];
+function speak(t){try{const u=new SpeechSynthesisUtterance(t);u.lang='en-GB';u.rate=.9;const v=speechSynthesis.getVoices().find(v=>/en-GB/i.test(v.lang))||speechSynthesis.getVoices().find(v=>/^en/i.test(v.lang));if(v)u.voice=v;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){toast('Speech is not available on this device')}}
+function dailyWords(){
+ if(S.get('plan:wDay','')===key)return S.get('plan:wNew:'+key,[]);
+ const n=S.get('plan:wPer',5);let i=S.get('plan:wIdx',0);const wd=loadDeck('words'),have=new Set(wd.map(c=>c.w.toLowerCase()));const add=[];
+ while(add.length<n&&i<WORDS.length){const w=WORDS[i++];if(!have.has(w[0]))add.push(w)}
+ add.forEach(([w,m,e])=>wd.push({w,m,e,b:0,due:key,nw:key}));S.set(dk('words'),wd);if(deckId==='words')deck=wd;
+ S.set('plan:wIdx',i);S.set('plan:wDay',key);const names=add.map(a=>a[0]);S.set('plan:wNew:'+key,names);return names}
+function renderNewWords(){const names=S.get('plan:wNew:'+key,[]),dn=DL().words;
+ const list=names.map(n=>WORDS.find(w=>w[0]===n)).filter(Boolean);
+ $('newWords').innerHTML=list.length?`<div class="nwhead"><b>Today's new words</b><span>${S.get('plan:wIdx',0)} of ${WORDS.length} learned</span></div>`+list.map(([w,m,e])=>`<div class="nw"><button class="spk" data-say="${esc(w)}. ${esc(e)}" aria-label="Listen">🔊</button><div><b>${esc(w)}</b><span>${esc(m)}</span><em>${esc(e)}</em></div></div>`).join('')+(dn?'<p class="note">Done for today. They will come back in your reviews.</p>':'<button class="btn big" id="nwDone" style="width:100%;margin-top:8px">I learned them</button>')
+ :S.get('plan:wIdx',0)>=WORDS.length?'<div class="nw"><div><b>You have learned all '+WORDS.length+' built-in words!</b><span>Add your own from reading and listening.</span></div></div>':'';
+ if($('nwDone'))$('nwDone').onclick=()=>{markDL('words');renderNewWords();toast('Words learned. Reviews start tomorrow.')}}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-say]');if(b)speak(b.dataset.say)});
+
+/* ---------- learn every day ---------- */
+const DL=()=>S.get('plan:daily:'+key,{});
+function markDL(k){const d=DL();if(d[k])return;d[k]=1;S.set('plan:daily:'+key,d);const n=Object.keys(d).length;if(n>=3){const L=S.get('plan:ldays',[]);if(!L.includes(key)){L.push(key);S.set('plan:ldays',L);confetti(120,true);toast('Daily learning done! Streak +1')}}renderDaily();checkBadges()}
+function lstreak(){const d=new Set(S.get('plan:ldays',[]));let k=d.has(key)?key:addDays(key,-1),n=0;while(d.has(k)){n++;k=addDays(k,-1)}return n}
+const dayN=()=>-dd('2026-01-01');
+function seeded(seed){let a=seed>>>0;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function ideaOfDay(){const i=dayN();const P=STARTERS.phil[i%STARTERS.phil.length],E=STARTERS.econ[i%STARTERS.econ.length];const all=[...FM.calc,...FM.stats].flatMap(([g,r])=>r.map(x=>[g,...x]));return{P,E,F:all[i%all.length]}}
+function renderDaily(){const d=DL(),nw=S.get('plan:wNew:'+key,[]).length,n=Object.keys(d).length;
+ const items=[['words','New words',nw?`${nw} words · listen and learn`:'All built-in words done','linear-gradient(135deg,#e11df0,#ff70d0)','Aa'],['challenge','Daily challenge','3 problems: Calc, Stats, SAT','linear-gradient(135deg,#2563ff,#00c8ff)','∫'],['idea','Idea + formula','Philosophy, economics, math','linear-gradient(135deg,#7c3aed,#d06bff)','Φ'],['write','Writing prompt','Today\'s IELTS question','linear-gradient(135deg,#ff9f00,#ffd60a)','W']];
+ $('daily').innerHTML=`<div class="dlhead"><div><b>Learn every day</b><span>${n}/4 done · do 3 to keep your streak</span></div><span class="lfire">${lstreak()}<small>day streak</small></span></div><div class="dlgrid">${items.map(([k,t,s,g,i])=>`<button class="dl${d[k]?' done':''}" data-dl="${k}" style="--g:${g}"><i>${d[k]?'✓':i}</i><b>${t}</b><span>${s}</span></button>`).join('')}</div>`}
+$('daily').onclick=e=>{const b=e.target.closest('[data-dl]');if(!b)return;const k=b.dataset.dl;
+ if(k==='words'){location.hash='words';return}
+ if(k==='challenge'){location.hash='practice';setTimeout(startDaily,150);return}
+ if(k==='write'){wr.mode='t2';wr.p=dayN();wr.endAt=null;saveW();location.hash='write';return}
+ if(k==='idea'){const{P,E,F}=ideaOfDay();$('ideaBody').innerHTML=`<div class="idc" style="--g:linear-gradient(135deg,#7c3aed,#d06bff)"><small>Philosophy · ${esc(P[2])}</small><b>${esc(P[0])}</b><span>${esc(P[1])}</span></div><div class="idc" style="--g:linear-gradient(135deg,#00a99d,#2ee8d2)"><small>Economics</small><b>${esc(E[0])}</b><span>${esc(E[1])}</span><em>${esc(E[2])}</em></div><div class="idc" style="--g:linear-gradient(135deg,#2563ff,#00c8ff)"><small>Formula · ${esc(F[0])}</small><b>${esc(F[1])}</b><span class="hidef" id="fReveal">Write it on paper first, then tap to reveal</span></div><p class="note">Feynman test: explain the philosophy idea out loud in one minute, as if to a friend.</p>`;$('fReveal').onclick=()=>{$('fReveal').innerHTML=F[2].split('    ').map(esc).join('<br>');$('fReveal').classList.add('shown')};$('ideaSheet').classList.add('open')}};
+$('ideaDone').onclick=()=>{markDL('idea');$('ideaSheet').classList.remove('open')};
+$('ideaClose').onclick=()=>$('ideaSheet').classList.remove('open');
+$('ideaSheet').onclick=e=>{if(e.target===$('ideaSheet'))$('ideaSheet').classList.remove('open')};
+function startDaily(){const rnd=seeded(20260000+dayN()),orig=Math.random;Math.random=rnd;const list=['calc','stats','sat'].map(s=>{const g=GEN[s][Math.floor(rnd()*GEN[s].length)];return Object.assign(g[2](),{id:g[0],tn:g[1],sub:s})});Math.random=orig;
+ PS={sub:'calc',mode:'daily',pool:GEN.calc,list,n:0,c:0,streak:0,best:0,t0:Date.now(),end:null,total:3,q:null,checked:false};PS.q=list[0];PS.sub=list[0].sub;renderPractice()}
+
+/* ---------- essay checker ---------- */
+const LINK={add:['moreover','furthermore','in addition','additionally','also','besides','what is more'],contrast:['however','nevertheless','nonetheless','on the other hand','in contrast','whereas','while','although','even though','despite','in spite of','conversely','yet'],cause:['therefore','consequently','as a result','thus','hence','because','since','due to','owing to','for this reason','this means that','leads to'],example:['for example','for instance','such as','namely','to illustrate','in particular','notably'],sum:['in conclusion','to conclude','overall','to sum up','in summary','ultimately','all in all']};
+const INFORMAL=['gonna','wanna','kids','stuff','things','a lot of','lots of','pretty much','really','very very','okay','ok','big deal','nowadays people','basically','totally','anyways','cool','huge','get rid of','kind of','sort of','etc'];
+const CLICHE=['in this day and age','since the dawn of time','every coin has two sides','last but not least','in a nutshell','from the bottom of my heart','it goes without saying','in today\'s modern world'];
+const MISSP={recieve:'receive',goverment:'government',enviroment:'environment',untill:'until',beleive:'believe',occured:'occurred',wich:'which',becouse:'because',definately:'definitely',seperate:'separate',begining:'beginning',arguement:'argument',tommorow:'tomorrow',accomodation:'accommodation',adress:'address',neccessary:'necessary',necesary:'necessary',successfull:'successful',responsability:'responsibility',developement:'development',advertisment:'advertisement',familly:'family',studing:'studying',writting:'writing',comming:'coming',beautifull:'beautiful',knowlege:'knowledge',alot:'a lot',infomation:'information',techonology:'technology',tecnology:'technology',posibility:'possibility',oppinion:'opinion',comunity:'community',dissapear:'disappear',embarass:'embarrass',existance:'existence',foriegn:'foreign',independant:'independent',occurence:'occurrence',prefered:'preferred',recomend:'recommend',religous:'religious',sucess:'success',truely:'truly',useing:'using',wierd:'weird',buisness:'business',calender:'calendar',goverments:'governments',achive:'achieve',enviromental:'environmental',polution:'pollution',increse:'increase',importent:'important',diffrent:'different',probaly:'probably',realy:'really',finaly:'finally',especialy:'especially',benifit:'benefit',benifits:'benefits',sociaty:'society',childrens:'children',peoples:'people',informations:'information',advices:'advice',knowledges:'knowledge',researches:'research'};
+const SYN={important:'crucial, essential, vital, significant',big:'substantial, considerable, major',good:'beneficial, advantageous, positive',bad:'harmful, detrimental, negative',many:'numerous, a large number of, countless',people:'individuals, citizens, the public',think:'believe, argue, contend, maintain',problem:'issue, challenge, difficulty',help:'assist, support, enable',show:'demonstrate, indicate, illustrate',increase:'rise, grow, climb, surge',decrease:'decline, fall, drop, diminish',use:'utilise, employ, rely on',very:'(cut it, or use a stronger adjective)',also:'moreover, in addition, furthermore',get:'obtain, gain, acquire',make:'create, produce, cause',thing:'aspect, factor, issue',lot:'a great deal, a considerable amount',change:'shift, transformation, alter',improve:'enhance, strengthen, boost',affect:'influence, have an impact on',need:'require, demand',give:'provide, offer, grant',hard:'challenging, demanding, difficult'};
+const ACAD=new Set(WORDS.map(w=>w[0]).concat('analyse analyze approach assess benefit concept consist context data define derive distribute economy environment establish estimate evidence factor function identify impact indicate individual interpret involve issue labour method occur policy principle process require research respond role sector source specific structure theory vary consequence considerable contribute demonstrate dimension emphasis ensure exclude framework illustrate initial maintain obtain participate potential primary promote range regulate resource strategy sufficient tradition transfer ultimately valid'.split(' ')));
+const STOP=new Set('the a an and or but of to in on at for with by from as is are was were be been being it its this that these those there their they them he she his her we our you your i my me not no so if than then too can could would should will may might must do does did have has had which who whom what when where why how all any each more most other some such only own same just into over also about up out more because while'.split(' '));
+function sentencesOf(t){return t.replace(/\s+/g,' ').split(/(?<=[.!?])\s+(?=[A-Z"'(])/).map(s=>s.trim()).filter(s=>s.length>1)}
+function analyzeEssay(text,mode,prompt){
+ const raw=text.trim(),low=' '+raw.toLowerCase().replace(/[’']/g,"'")+' ';
+ const words=(raw.match(/[A-Za-z’']+/g)||[]),W=words.length,lw=words.map(w=>w.toLowerCase().replace(/[’']/g,"'"));
+ const paras=raw.split(/\n\s*\n|\n/).map(p=>p.trim()).filter(p=>p.split(/\s+/).length>3);
+ const sents=sentencesOf(raw),sl=sents.map(s=>(s.match(/[A-Za-z’']+/g)||[]).length),avg=sl.length?W/sl.length:0;
+ const sd=sl.length>1?Math.sqrt(sl.reduce((a,x)=>a+(x-avg)**2,0)/sl.length):0;
+ const target=modes[mode][2]||0;
+ const found={};Object.entries(LINK).forEach(([k,l])=>{found[k]=l.filter(x=>new RegExp('[^a-z]'+x+'[^a-z]').test(low))});
+ const linkCount=Object.values(found).flat().length,linkTypes=Object.values(found).filter(a=>a.length).length;
+ const content=lw.filter(w=>w.length>3&&!STOP.has(w)),freq={};content.forEach(w=>freq[w]=(freq[w]||0)+1);
+ const repeated=Object.entries(freq).filter(([w,c])=>c>=(W>300?5:4)).sort((a,b)=>b[1]-a[1]).slice(0,6);
+ const ttr=content.length?new Set(content).size/content.length:0;
+ const acad=[...new Set(lw.filter(w=>ACAD.has(w)))];
+ const informal=INFORMAL.filter(x=>new RegExp('[^a-z]'+x.replace(/ /g,'\\s+')+'[^a-z]').test(low));
+ const contractions=[...new Set((raw.match(/\b[A-Za-z]+n[’']t\b|\b(I|you|we|they|it|he|she|that|there)[’'](m|re|ve|ll|d|s)\b/gi)||[]).map(x=>x.toLowerCase()))];
+ const cliches=CLICHE.filter(x=>low.includes(x));
+ const miss=[...new Set(lw.filter(w=>MISSP[w]))];
+ const longS=sents.filter((s,i)=>sl[i]>40),shortS=sents.filter((s,i)=>sl[i]<5);
+ const lowerI=/(^|\s)i(\s|[,.])/m.test(raw),noCap=sents.filter(s=>/^[a-z]/.test(s)).length,spaceP=(raw.match(/[,.;:][A-Za-z]/g)||[]).length;
+ const complex=sents.filter(s=>/\b(which|who|whom|whose|although|whereas|while|if|unless|because|since|despite|that)\b/i.test(s)).length;
+ const passive=(low.match(/\b(is|are|was|were|be|been|being)\s+\w+ed\b/g)||[]).length;
+ const pw=prompt?[...new Set((prompt.toLowerCase().match(/[a-z]+/g)||[]).filter(w=>w.length>4&&!STOP.has(w)))]:[];
+ const pHit=pw.filter(w=>low.includes(w.slice(0,Math.max(5,w.length-2))));
+ const opinion=/\b(i (strongly )?(believe|agree|disagree|think|would argue)|in my (view|opinion)|this essay (will )?(argue|disagree|agree)|i am convinced|my view is)\b/i.test(raw);
+ const concl=found.sum.length>0,overview=/\boverall\b/i.test(raw),nums=(raw.match(/\d/g)||[]).length;
+ const issues=[],good=[];
+ // Task
+ let tr=7;
+ if(target&&W<target){tr-=W<target*.8?2:1;issues.push(['Task',`Only ${W} words. Aim for at least ${target}; under-length essays lose marks.`])}else if(target)good.push(`Length is fine (${W} words).`);
+ if(mode==='t2'){if(!opinion&&prompt&&/extent|agree|opinion|your view|positive or negative/i.test(prompt)){tr-=1;issues.push(['Task','The question asks for your opinion, but I can\'t find a clear position. State it in the introduction and repeat it in the conclusion ("I firmly believe that…").'])}else if(opinion)good.push('Your position is clear.');
+  if(pw.length&&pHit.length/pw.length<.4){tr-=1;issues.push(['Task',`You may be drifting off-topic: few key words from the question appear (${pw.filter(w=>!pHit.includes(w)).slice(0,5).join(', ')}). Address every part of the prompt.`])}
+  if(!concl){tr-=.5;issues.push(['Task','No clear conclusion. Finish with "In conclusion, …" and restate your view.'])}else good.push('You have a conclusion.')}
+ if(mode==='t1'){if(!overview){tr-=1.5;issues.push(['Task','No overview. Task 1 needs a sentence starting "Overall, …" that sums up the main trends. Without it you can\'t get above band 5 for Task Achievement.'])}else good.push('You included an overview.');
+  if(nums<4){tr-=1;issues.push(['Task','Support your description with figures from the chart (numbers, percentages, years).'])}}
+ if(mode==='ph'){const thesis=/\b(i (will )?argue|my thesis|i (shall )?defend|i claim)\b/i.test(raw),obj=/\b(one (might|could) object|an objection|critics (argue|might)|it (might|could) be argued|opponents)\b/i.test(raw),ex=found.example.length>0;
+  if(!thesis)issues.push(['Argument','State your thesis explicitly early: "In this essay I will argue that…"']);else good.push('Clear thesis.');
+  if(!obj)issues.push(['Argument','Add the strongest objection to your view ("One might object that…"), then reply to it. IPO essays are judged on this.']);else good.push('You engage with an objection.');
+  if(!ex)issues.push(['Argument','Use concrete examples or thought experiments to support your claims.']);
+  tr=5+(thesis?1:0)+(obj?1.5:0)+(ex?.5:0)+(W>=800?.5:0)}
+ // Coherence
+ let cc=7;const P=paras.length;
+ if(mode==='t2'&&(P<4||P>6)){cc-=P<3?1.5:.5;issues.push(['Coherence',`${P} paragraph${P===1?'':'s'}. Use 4–5: introduction, 2–3 body paragraphs, conclusion. Leave an empty line between them.`])}else if(mode==='t1'&&P<3){cc-=1;issues.push(['Coherence','Use 3–4 paragraphs: introduction, overview, 1–2 detail paragraphs.'])}else if(P>=3)good.push(`Good paragraphing (${P} paragraphs).`);
+ if(linkTypes<3){cc-=1;issues.push(['Coherence',`Few linking words (found ${linkCount}). Mix contrast (however, whereas), cause (therefore, as a result) and example (for instance).`])}
+ else if(linkCount>W/18){cc-=.5;issues.push(['Coherence','Lots of linking words. Band 8–9 uses them naturally, not at the start of every sentence.'])}else good.push(`Varied linking: ${Object.values(found).flat().slice(0,5).join(', ')}.`);
+ const starts={};sents.forEach(s=>{const f=s.split(/\s+/)[0].toLowerCase().replace(/[^a-z]/g,'');starts[f]=(starts[f]||0)+1});const rs=Object.entries(starts).filter(([w,c])=>c>=3&&w.length>1);if(rs.length){cc-=.5;issues.push(['Coherence',`Many sentences start the same way (${rs.map(x=>`"${x[0]}" ×${x[1]}`).join(', ')}). Vary your openings.`])}
+ // Lexical
+ let lr=6.5;if(ttr>.62)lr+=1;else if(ttr>.55)lr+=.5;else if(ttr<.45){lr-=1;issues.push(['Vocabulary','A lot of words are repeated. Use synonyms and paraphrase the question.'])}
+ if(acad.length>=8){lr+=.5;good.push(`Strong academic vocabulary: ${acad.slice(0,6).join(', ')}.`)}else if(acad.length<3&&W>120){lr-=.5;issues.push(['Vocabulary','Use more precise, academic words (e.g. significant, consequence, alleviate, substantial).'])}
+ repeated.forEach(([w,c])=>issues.push(['Vocabulary',`"${w}" appears ${c} times.${SYN[w]?` Try: ${SYN[w]}.`:' Find a synonym or restructure.'}`]));if(repeated.length>2)lr-=.5;
+ if(informal.length){lr-=Math.min(1,informal.length*.5);issues.push(['Vocabulary',`Informal language: ${informal.join(', ')}. Keep the tone academic.`])}
+ if(contractions.length){lr-=.5;issues.push(['Vocabulary',`Avoid contractions in academic writing: ${contractions.slice(0,5).join(', ')} → write them in full.`])}
+ if(cliches.length){lr-=.5;issues.push(['Vocabulary',`Clichés examiners dislike: "${cliches.join('", "')}". Say it directly.`])}
+ if(miss.length){lr-=Math.min(1.5,miss.length*.5);issues.push(['Spelling',`Possible spelling errors: ${miss.map(w=>`${w} → ${MISSP[w]}`).join(', ')}.`])}
+ // Grammar
+ let gr=6.5;const cr=sents.length?complex/sents.length:0;
+ if(cr>.5){gr+=1;good.push('Good mix of complex sentences.')}else if(cr>.3)gr+=.5;else{gr-=.5;issues.push(['Grammar','Mostly simple sentences. Add complex structures: relative clauses (which, who), concession (although, whereas), conditionals.'])}
+ if(sd>6)gr+=.5;else if(sl.length>4&&sd<3.5)issues.push(['Grammar','Your sentences are all a similar length. Mix short punchy sentences with longer complex ones.']);
+ if(passive>=2)good.push('You use passive structures. Good for academic style.');
+ if(longS.length){gr-=.5;issues.push(['Grammar',`${longS.length} very long sentence${longS.length>1?'s':''} (40+ words). Split them to avoid run-ons.`])}
+ if(shortS.length>1)issues.push(['Grammar','Some sentences are very short (under 5 words). Check they are complete sentences, not fragments.']);
+ if(lowerI){gr-=.5;issues.push(['Grammar','"i" should always be capital "I".'])}
+ if(noCap){gr-=.5;issues.push(['Grammar',`${noCap} sentence${noCap>1?'s start':' starts'} with a lowercase letter.`])}
+ if(spaceP>1)issues.push(['Grammar','Missing spaces after punctuation (e.g. "word,word"). Add a space after commas and full stops.']);
+ const cl=v=>Math.max(3,Math.min(9,Math.round(v*2)/2));
+ const sc=mode==='ph'?null:[cl(tr),cl(cc),cl(lr),cl(gr)];
+ return{W,P,S:sents.length,avg,sc,overall:sc?Math.round(sc.reduce((a,b)=>a+b)/4*2)/2:null,phScore:mode==='ph'?Math.max(1,Math.min(5,Math.round((tr-4)*10)/10)):null,issues,good,found,repeated,informal,miss,contractions,longS,acad}
+}
+function highlight(text,a){let h=esc(text);const mark=(arr,cls)=>arr.forEach(w=>{if(!w)return;h=h.replace(new RegExp('(^|[^A-Za-z>])('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/ /g,'\\s+')+')(?=[^A-Za-z<]|$)','gi'),`$1<mark class="${cls}">$2</mark>`)});
+ mark(Object.values(a.found).flat(),'hl-link');mark(a.repeated.map(x=>x[0]),'hl-rep');mark(a.informal.concat(a.contractions),'hl-inf');mark(a.miss,'hl-miss');mark(a.acad,'hl-acad');
+ return h.replace(/\n/g,'<br>')}
+function aiPrompt(){const m=modes[wr.mode][0],q=$('wrPrompt').textContent;return wr.mode==='ph'?`You are an International Philosophy Olympiad judge. Grade my essay on: relevance to the topic, philosophical understanding, persuasive power of argumentation, coherence, and originality (score each 1–5, explain why). Then list my 5 biggest weaknesses with concrete fixes, point out any logical gaps, suggest the strongest objection I missed, and rewrite my weakest paragraph.\n\nTopic: ${q}\n\nMy essay:\n${wr.text}`:`You are a strict, experienced IELTS examiner. Grade my IELTS Academic Writing ${m} using the official band descriptors: ${wr.mode==='t1'?'Task Achievement':'Task Response'}, Coherence & Cohesion, Lexical Resource, Grammatical Range & Accuracy. Give a band (0–9, in halves) for each and an overall band, with a short reason for each.\nThen: 1) list every grammar and vocabulary error as "original → correction"; 2) give the 3 changes that would raise my band the most; 3) rewrite my weakest paragraph at band 9 level; 4) suggest 5 better words or collocations I could have used.\n\nQuestion: ${q}\n\nMy answer (${wcount(wr.text)} words):\n${wr.text}`}
+function renderCheck(){const t=wr.text.trim();if(wcount(t)<30){toast('Write at least 30 words first');return}
+ const a=analyzeEssay(t,wr.mode,$('wrPrompt').textContent),C=crits[wr.mode]||[];
+ const bars=a.sc?C.map((c,i)=>`<div class="cbar"><span>${c}</span><div><i style="width:${(a.sc[i]-3)/6*100}%"></i></div><b>${a.sc[i].toFixed(1)}</b></div>`).join(''):'';
+ const groups={};a.issues.forEach(([g,x])=>(groups[g]=groups[g]||[]).push(x));
+ $('wrCheck').innerHTML=`<div class="echeck"><div class="ehead"><div class="eband"><b>${a.sc?a.overall.toFixed(1):a.phScore.toFixed(1)}</b><span>${a.sc?'estimated band':'estimated /5'}</span></div><div><b>Automatic check</b><span>${a.W} words · ${a.P} paragraphs · ${a.S} sentences · ${a.avg.toFixed(1)} words per sentence</span></div></div>${bars}<p class="note" style="color:rgba(255,255,255,.85)">A rough estimate from patterns in your text, not an examiner. For real feedback, use "Get AI examiner feedback" below.</p></div>
+ ${a.good.length?`<h2 class="sec">What's working</h2><ul class="ok">${a.good.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}
+ <h2 class="sec">To improve (${a.issues.length})</h2>${Object.entries(groups).map(([g,l])=>`<div class="igrp"><b>${g}</b><ul>${l.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`).join('')||'<p class="note">No automatic issues found. Get AI feedback for the details.</p>'}
+ <h2 class="sec">Your essay, highlighted</h2><div class="hlkey"><span class="hl-link">linking</span><span class="hl-acad">academic</span><span class="hl-rep">repeated</span><span class="hl-inf">informal</span><span class="hl-miss">spelling</span></div><div class="hltext">${highlight(t,a)}</div>
+ <h2 class="sec">Real examiner feedback</h2><p class="sub">Copy a ready-made examiner prompt with your essay, then paste it into Claude. You get band scores, every error corrected and a band 9 rewrite.</p>
+ <button class="btn big" id="aiCopy" style="width:100%">Get AI examiner feedback</button><a class="ghost" href="https://claude.ai/new" target="_blank" rel="noopener" style="display:grid;place-items:center;width:100%;margin-top:8px;text-decoration:none;color:var(--ink)">Open Claude</a>`;
+ $('aiCopy').onclick=async()=>{try{await navigator.clipboard.writeText(aiPrompt());toast('Copied! Open Claude and paste it.')}catch(e){$('wrCheck').insertAdjacentHTML('beforeend',`<textarea class="aip" readonly>${esc(aiPrompt())}</textarea>`);toast('Copy blocked: select the text in the box below and copy it.')}};
+ S.set('plan:lastCheck',{d:key,b:a.overall});S.set('plan:checks',S.get('plan:checks',0)+1);checkBadges();$('wrCheck').scrollIntoView({behavior:'smooth',block:'start'});return a}
+
 /* ---------- router ---------- */
 const views=['today','goals','practice','focus','stats','tools','methods','library','words','errors','write','formulas','screen','backup','settings'];
 const sub={stats:1,words:1,errors:1,write:1,formulas:1,screen:1,backup:1,settings:1,methods:1,library:1};
 function show(){let v=location.hash.slice(1);if(!views.includes(v))v='today';
  views.forEach(x=>$('v-'+x).classList.toggle('on',x===v));
  const nv=sub[v]?'tools':v;$('fab').hidden=!(v==='today'||v==='tools'||v==='stats');$('pAcc').textContent=(()=>{const t=Object.values(topicStats());const n=t.reduce((a,x)=>a+x.n,0),c=t.reduce((a,x)=>a+x.c,0);return n?`${Math.round(c/n*100)}% of ${n}`:''})();document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===nv));
- ({words:renderWords,errors:renderErrors,write:()=>{renderWrite();renderHist()},formulas:renderFm,screen:renderScreen,tools:renderTiles,settings:renderSettings,backup:renderBk,goals:()=>{renderGoals();renderForm()},stats:()=>{renderStats();renderRings();renderLevel();renderHeat();renderBadges();renderCourses()},library:renderFormats,practice:renderPractice,today:()=>{chips();renderToday()},focus:fSync})[v]?.();window.scrollTo(0,0)}
+ ({words:renderWords,errors:renderErrors,write:()=>{renderWrite();renderHist()},formulas:renderFm,screen:renderScreen,tools:renderTiles,settings:renderSettings,backup:renderBk,goals:()=>{renderGoals();renderForm()},stats:()=>{renderStats();renderRings();renderLevel();renderHeat();renderBadges();renderCourses()},library:renderFormats,practice:renderPractice,today:()=>{chips();renderToday();renderDaily()},focus:fSync})[v]?.();window.scrollTo(0,0)}
 $('nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;if(location.hash==='#'+b.dataset.v)show();else location.hash=b.dataset.v};
 document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)location.hash=g.dataset.go});
 window.addEventListener('hashchange',show);
@@ -1579,7 +1771,7 @@ $('date').textContent=dstr;$('fToday').textContent=dstr;
 greet();
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'){if(kOf(new Date())!==key)location.reload();else if((endAt&&endAt.at>Date.now())||(fState&&!fState.paused))awake(true)}});
 setInterval(()=>{if(kOf(new Date())!==key&&document.visibilityState==='visible')location.reload()},60000);
-fSync();chips();renderCourses();renderToday(true);banner();checkBadges();onboard();fRenderPresets();fTick();renderWords();show();
+dailyWords();fSync();chips();renderCourses();renderToday(true);renderDaily();banner();checkBadges();onboard();fRenderPresets();fTick();renderWords();show();
 const clock=setInterval(()=>{tickToday();if(fState)fTick();if(wr.endAt&&$('v-write').classList.contains('on'))wTick()},1000);
 }
 </script>
